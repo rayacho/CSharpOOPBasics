@@ -1,6 +1,8 @@
 ﻿using System;
 
-class Program
+namespace DefiningClasses
+{
+	public class StartUp
 	{
 		static void Main(string[] args)
 		{
@@ -11,3 +13,4 @@ class Program
 			Console.WriteLine(result);
 		}
 	}
+}

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace _3.OldestFamilyMember
+namespace DefiningClasses
 {
 	public class Person
 	{
@@ -20,11 +20,10 @@ namespace _3.OldestFamilyMember
 			get { return name; }
 			set { name = value; }
 		}
-
 		public int Age
 		{
 			get { return age; }
 			set { age = value; }
-		}	
+		}
 	}
 }

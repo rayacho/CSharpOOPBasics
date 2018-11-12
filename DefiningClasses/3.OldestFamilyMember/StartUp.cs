@@ -3,7 +3,7 @@ using System.Reflection;
 
 namespace _3.OldestFamilyMember
 {
-	class Program
+	class StartUp
 	{
 		public static void Main(string[] args)
 		{

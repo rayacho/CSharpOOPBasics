@@ -9,34 +9,37 @@ namespace _02.CreatingConstructors
 		private string name;
 		private int age;
 
+		public Person() : this("No name", 1)
+		{
+		}
+
+		public Person(int age) : this("No name", age)
+		{
+		}
+
+		public Person(string name)
+		{
+			if (string.IsNullOrEmpty(name))
+			{
+				throw new NullReferenceException("Invalid name");
+			}
+
+			this.name = name;
+		}
+
+		public Person(string name, int age) : this(name)
+		{
+			this.age = age;
+		}
+
 		public string Name
 		{
-			get { return name; }
-			set { name = value; }
+			get { return this.name; }
 		}
 
 		public int Age
 		{
-			get { return age; }
-			set { age = value; }
-		}
-
-		public string FirstNameAndAge()
-		{
-			name = "No name";
-			age = 1;
-			return $"{name} {age}";
-		}
-
-		public string SecondNameAndAge(int age)
-		{
-			name = "No name";
-			return $"{name} {age}";
-		}
-
-		public string ThirdNameAndAge(string name, int age)
-		{
-			return $"{name} {age}";
+			get { return this.age; }
 		}
 	}
 }

@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 
+namespace DefiningClasses
+{
 	public class Person
 	{
 		private string name;
 		private int age;
 		public string Name
 		{
-			get { return name;  }
+			get { return name; }
 			set { name = value; }
 		}
 		public int Age
@@ -21,3 +23,4 @@ using System.Text;
 			return $"{this.name} {this.age}";
 		}
 	}
+}
