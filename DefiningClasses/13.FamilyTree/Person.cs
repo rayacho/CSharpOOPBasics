@@ -47,6 +47,28 @@ namespace _13.FamilyTree
 			set { children = value; }
 		}
 
+		public static Person CreatePerson(string personInput)
+
+		{
+			Person person = new Person();
+
+			if (IsBirthday(personInput))
+			{
+				person.Birthday = personInput;
+			}
+			else
+			{
+				person.FullName = personInput;
+			}
+
+			return person;
+		}
+
+		private static bool IsBirthday(string input)
+		{
+			return Char.IsDigit(input[0]);
+		}
+
 		public override string ToString()
 		{
 			return $"{this.FullName} {this.Birthday}";
