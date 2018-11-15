@@ -13,17 +13,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14.CatLady", "14.CatLady\14
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11.PokemonTrainer", "11.PokemonTrainer\11.PokemonTrainer.csproj", "{AA2D096B-9359-49DF-AED7-7488B052D3B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6.CompanyRoster", "6.CompanyRoster\6.CompanyRoster.csproj", "{57A1B885-546E-434C-82DE-0DBB09F242F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6.CompanyRoster", "6.CompanyRoster\6.CompanyRoster.csproj", "{57A1B885-546E-434C-82DE-0DBB09F242F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4.OpinionPoll", "4.OpinionPoll\4.OpinionPoll.csproj", "{8ACC0D2B-7DD3-4C36-BFF2-2479F7B568FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4.OpinionPoll", "4.OpinionPoll\4.OpinionPoll.csproj", "{8ACC0D2B-7DD3-4C36-BFF2-2479F7B568FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.DateModifier", "5.DateModifier\5.DateModifier.csproj", "{93D48BD4-F729-45BB-B810-1D2C7C01E01C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5.DateModifier", "5.DateModifier\5.DateModifier.csproj", "{93D48BD4-F729-45BB-B810-1D2C7C01E01C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.FamilyTree", "13.FamilyTree\13.FamilyTree.csproj", "{F9B92292-2E79-458B-BB94-F0543B895AA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13.FamilyTree", "13.FamilyTree\13.FamilyTree.csproj", "{F9B92292-2E79-458B-BB94-F0543B895AA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8.RawData", "8.RawData\8.RawData.csproj", "{7AF7B76A-F678-42E6-904A-D2AF7550384E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "8.RawData", "8.RawData\8.RawData.csproj", "{7AF7B76A-F678-42E6-904A-D2AF7550384E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9.RectangleIntersection", "9.RectangleIntersection\9.RectangleIntersection.csproj", "{1C15D24F-7E4C-41B7-AC2D-8B7585A33A92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "9.RectangleIntersection", "9.RectangleIntersection\9.RectangleIntersection.csproj", "{1C15D24F-7E4C-41B7-AC2D-8B7585A33A92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.SpeedRacing", "7.SpeedRacing\7.SpeedRacing.csproj", "{6BB936C0-B53A-40BC-A46D-90FDAC5453BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{1C15D24F-7E4C-41B7-AC2D-8B7585A33A92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C15D24F-7E4C-41B7-AC2D-8B7585A33A92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C15D24F-7E4C-41B7-AC2D-8B7585A33A92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BB936C0-B53A-40BC-A46D-90FDAC5453BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BB936C0-B53A-40BC-A46D-90FDAC5453BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BB936C0-B53A-40BC-A46D-90FDAC5453BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BB936C0-B53A-40BC-A46D-90FDAC5453BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -9,6 +9,32 @@ namespace DefiningClasses
 		private string name;
 		private int age;
 
+		public Person() : this("No name", 1)
+		{
+		
+		}
+
+		public Person(int age) : this("No name", age)
+		{
+
+		}
+
+		public Person(string name)
+		{
+	
+			if (string.IsNullOrEmpty(name))
+			{
+				throw new NullReferenceException("Invalid name");
+			}
+
+			this.name = name;
+		}
+
+		public Person(string name, int age) : this(name)
+		{
+			this.age = age;
+		}
+
 		public string Name
 		{
 			get { return this.name; }
@@ -17,27 +43,6 @@ namespace DefiningClasses
 		public int Age
 		{
 			get { return this.age; }
-		}
-
-		public string FirstPerson()
-		{
-			name = "No name";
-			age = 1;
-			return ($"{name} {age}");
-		}
-
-		public string SecondPerson(int age)
-		{
-			name = "No name";
-			this.age = age;
-			return ($"{name} {age}");
-		}
-
-		public string ThirdPerson(string name, int age)
-		{
-			this.name = name;
-			this.age = age;
-			return ($"{name} {age}");
 		}
 	}
 }
