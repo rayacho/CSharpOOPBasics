@@ -6,9 +6,9 @@ namespace _2.ClassBoxDataValidation
 {
 	public class Box
 	{
-		private double length;
-		private double width;
-		private double height;
+		private double _length;
+		private double _width;
+		private double _height;
 
 
 		public Box(double length, double width, double height)
@@ -20,58 +20,58 @@ namespace _2.ClassBoxDataValidation
 
 		public double Length
 		{
-			get { return this.length; }
+			get { return _length; }
 			private set
 			{
 				if (value <= 0)
 				{
 					throw new ArgumentException("Length cannot be zero or negative.");
 				}
-				length = value;
+				_length = value;
 			}
 		}
 
 		public double Width
 		{
-			get { return this.width; }
+			get { return _width; }
 			private set
 			{
 				if (value <= 0)
 				{
 					throw new ArgumentException("Width cannot be zero or negative.");
 				}
-				width = value;
+				_width = value;
 			}
 		}
 
 		public double Height
 		{
-			get { return this.height; }
+			get { return _height; }
 			private set
 			{
 				if (value <= 0)
 				{
 					throw new ArgumentException("Height cannot be zero or negative.");
 				}
-				height = value;
+				_height = value;
 			}
 		}
 
-		public static double SurfaceArea(double length, double width, double height)
+		public double SurfaceArea()
 		{
-			double surfaceArea = 2 * length * height + 2 * width * height + 2 * width * length;
+			double surfaceArea = 2 * _length * _height + 2 * _width * _height + 2 * _width * _length;
 			return surfaceArea;
 		}
 
-		public static double LateralSurfaceArea(double length, double width, double height)
+		public double LateralSurfaceArea()
 		{
-			double lateralSurfaceArea = 2 * length * height + 2 * width * height;
+			double lateralSurfaceArea = 2 * _length * _height + 2 * _width * _height;
 			return lateralSurfaceArea;
 		}
 
-		public static double Volume(double length, double width, double height)
+		public double Volume()
 		{
-			double volume = length * height * width;
+			double volume = _length * _height * _width;
 			return volume;
 		}
 

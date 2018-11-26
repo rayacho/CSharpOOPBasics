@@ -1,32 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace _1.ClassBox
+﻿namespace _1.ClassBox
 {
 	public class Box
 	{
-		private double Length { get; set; }
+		private readonly double _length;
 
-		private double Width { get; set; }
+		private readonly double _width;
 
-		private double Height { get; set; }
+		private readonly double _height;
 
-		public static double SurfaceArea(double length, double width, double height)
+		public Box(double length, double width, double height)
 		{
-			double surfaceArea = 2 * length * height + 2 * width * height + 2 * width * length;
+			_length = length;
+			_width = width;
+			_height = height;
+		}
+
+		public double SurfaceArea()
+		{
+			double surfaceArea = 2 * _length * _height + 2 * _width * _height + 2 * _width * _length;
 			return surfaceArea;
 		}
 
-		public static double LateralSurfaceArea(double length, double width, double height)
+		public double LateralSurfaceArea()
 		{
-			double lateralSurfaceArea = 2 * length * height + 2 * width * height;
+			double lateralSurfaceArea = 2 * _length * _height + 2 * _width * _height;
 			return lateralSurfaceArea;
 		}
 
-		public static double Volume(double length, double width, double height)
+		public double Volume()
 		{
-			double volume = length * height * width;
+			double volume = _length * _height * _width;
 			return volume;
 		}
 
