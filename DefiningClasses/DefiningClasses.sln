@@ -25,9 +25,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "8.RawData", "8.RawData\8.Ra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "9.RectangleIntersection", "9.RectangleIntersection\9.RectangleIntersection.csproj", "{1C15D24F-7E4C-41B7-AC2D-8B7585A33A92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.SpeedRacing", "7.SpeedRacing\7.SpeedRacing.csproj", "{6BB936C0-B53A-40BC-A46D-90FDAC5453BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "7.SpeedRacing", "7.SpeedRacing\7.SpeedRacing.csproj", "{6BB936C0-B53A-40BC-A46D-90FDAC5453BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.Google", "12.Google\12.Google.csproj", "{33A7B71C-624E-4C50-A6D2-A486D2F22116}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12.Google", "12.Google\12.Google.csproj", "{33A7B71C-624E-4C50-A6D2-A486D2F22116}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.CarsSalesman", "10.CarsSalesman\10.CarsSalesman.csproj", "{B823ABC1-67BE-43FD-9D19-AE92725F96A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{33A7B71C-624E-4C50-A6D2-A486D2F22116}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33A7B71C-624E-4C50-A6D2-A486D2F22116}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33A7B71C-624E-4C50-A6D2-A486D2F22116}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B823ABC1-67BE-43FD-9D19-AE92725F96A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B823ABC1-67BE-43FD-9D19-AE92725F96A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B823ABC1-67BE-43FD-9D19-AE92725F96A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B823ABC1-67BE-43FD-9D19-AE92725F96A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
