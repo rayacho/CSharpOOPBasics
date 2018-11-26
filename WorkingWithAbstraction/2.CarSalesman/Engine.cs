@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace _2.CarSalesman
+namespace _10.CarSalesman
 {
 	class Engine
 	{
-
 		private const string offset = "  ";
 
 		public string model;

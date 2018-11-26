@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace _10.CarsSalesman
+namespace _2.CarsSalesman
 {
 	class CarSalesman
 	{

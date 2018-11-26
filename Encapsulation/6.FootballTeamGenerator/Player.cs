@@ -9,13 +9,13 @@ namespace _6.FootballTeamGenerator
 		private const int MinStatsValue = 0;
 		private const int MaxStatsValue = 100;
 
-		private string name;
-		private double endurance;
-		private double sprint;
-		private double dribble;
-		private double passing;
-		private double shooting;
-		private double skillLevel;
+		private string _name;
+		private double _endurance;
+		private double _sprint;
+		private double _dribble;
+		private double _passing;
+		private double _shooting;
+		private double _skillLevel;
 
 		public Player(string name, double endurance, double sprint, double dribble, double passing, double shooting)
 		{
@@ -25,12 +25,12 @@ namespace _6.FootballTeamGenerator
 			this.Dribble = dribble;
 			this.Passing = passing;
 			this.Shooting = shooting;
-			this.skillLevel = (endurance + sprint + dribble + passing + shooting) / 5;
+			_skillLevel = (endurance + sprint + dribble + passing + shooting) / 5;
 		}
 
 		public string Name
 		{
-			get	{	return this.name;	}
+			get	{	return _name;	}
 
 			private set
 			{
@@ -39,18 +39,18 @@ namespace _6.FootballTeamGenerator
 					throw new ArgumentException("A name should not be empty.");
 				}
 
-				this.name = value;
+				_name = value;
 			}
 		}
 
-		public double SkillLevel { get { return this.skillLevel; } }
+		public double SkillLevel { get { return _skillLevel; } }
 
 		private double Shooting
 		{
 			set
 			{
 				this.ValidateStat(value, nameof(this.Shooting));
-				this.shooting = value;
+				_shooting = value;
 			}
 		}
 
@@ -59,7 +59,7 @@ namespace _6.FootballTeamGenerator
 			set
 			{
 				this.ValidateStat(value, nameof(this.Passing));
-				this.passing = value;
+				_passing = value;
 			}
 		}
 
@@ -68,7 +68,7 @@ namespace _6.FootballTeamGenerator
 			set
 			{
 				this.ValidateStat(value, nameof(this.Dribble));
-				this.dribble = value;
+				_dribble = value;
 			}
 		}
 
@@ -77,7 +77,7 @@ namespace _6.FootballTeamGenerator
 			set
 			{
 				this.ValidateStat(value, nameof(this.Sprint));
-				this.sprint = value;
+				_sprint = value;
 			}
 		}
 
@@ -86,7 +86,7 @@ namespace _6.FootballTeamGenerator
 			set
 			{
 				this.ValidateStat(value, nameof(this.Endurance));
-				this.endurance = value;
+				_endurance = value;
 			}
 		}
 

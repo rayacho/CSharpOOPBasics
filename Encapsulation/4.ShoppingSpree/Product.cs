@@ -6,8 +6,8 @@ namespace _4.ShoppingSpree
 {
 	public class Product
 	{
-		private string name;
-		private decimal price;
+		private string _name;
+		private decimal _price;
 
 		public Product(string productName, decimal productPrice)
 		{
@@ -17,7 +17,7 @@ namespace _4.ShoppingSpree
 
 		public string Name
 		{
-			get { return name; }
+			get { return _name; }
 			set
 			{
 				if (string.IsNullOrWhiteSpace(value))
@@ -25,13 +25,13 @@ namespace _4.ShoppingSpree
 					throw new ArgumentException("Name cannot be empty");
 				}
 
-				name = value;
+				_name = value;
 			}
 		}
 
 		public decimal Price
 		{
-			get { return price; }
+			get { return _price; }
 			set
 			{
 				if (value < 0)
@@ -39,7 +39,7 @@ namespace _4.ShoppingSpree
 					throw new ArgumentException("Money cannot be negative");
 				}
 
-				price = value;
+				_price = value;
 			}
 		}
 

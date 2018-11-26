@@ -9,8 +9,8 @@ namespace _3.AnimalFarm
 		public const int MinAge = 0;
 		public const int MaxAge = 15;
 
-		private string name;
-		private int age;
+		private string _name;
+		private int _age;
 
 		public Chicken(string name, int age)
 		{
@@ -20,7 +20,7 @@ namespace _3.AnimalFarm
 
 		public string Name
 		{
-			get {	return this.name; }
+			get {	return _name; }
 
 			private set
 			{
@@ -28,13 +28,13 @@ namespace _3.AnimalFarm
 				{
 					throw new ArgumentException("Name cannot be empty.");
 				}
-				this.name = value;
+				_name = value;
 			}
 		}
 
 		public int Age
 		{
-			get	{	return this.age;	}
+			get	{	return _age;	}
 
 			private set
 			{
@@ -42,7 +42,7 @@ namespace _3.AnimalFarm
 				{
 					throw new ArgumentException("Age should be between 0 and 15.");
 				}
-				this.age = value;
+				_age = value;
 			}
 		}
 

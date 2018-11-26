@@ -7,15 +7,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1.RawData", "1.RawData\1.Ra
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.CarSalesman", "2.CarSalesman\2.CarSalesman.csproj", "{7B0DA8A3-ED68-4C75-891F-E2F54D48B270}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.JediGalaxy", "3.JediGalaxy\3.JediGalaxy.csproj", "{1938AE8E-A043-4248-8C09-51C7F76FC8B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.JediGalaxy", "3.JediGalaxy\3.JediGalaxy.csproj", "{1938AE8E-A043-4248-8C09-51C7F76FC8B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4.Hospital", "4.Hospital\4.Hospital.csproj", "{287FF47D-F099-4180-94D9-A6F3421829A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4.Hospital", "4.Hospital\4.Hospital.csproj", "{287FF47D-F099-4180-94D9-A6F3421829A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.GreedyTimes", "5.GreedyTimes\5.GreedyTimes.csproj", "{0E587569-3218-497B-BF60-54E2EFDFB9FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5.GreedyTimes", "5.GreedyTimes\5.GreedyTimes.csproj", "{0E587569-3218-497B-BF60-54E2EFDFB9FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6.Sneaking", "6.Sneaking\6.Sneaking.csproj", "{5059BCA0-EED4-42D9-AA9C-EABC1ECE6925}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6.Sneaking", "6.Sneaking\6.Sneaking.csproj", "{5059BCA0-EED4-42D9-AA9C-EABC1ECE6925}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "13.FamilyTree", "..\DefiningClasses\13.FamilyTree\13.FamilyTree.csproj", "{C8E1440D-7E98-47D7-BF9B-089019566D1F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.CarsSalesman", "..\DefiningClasses\10.CarsSalesman\2.CarsSalesman.csproj", "{5C875449-736B-482A-B66E-340FCCDF3824}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{C8E1440D-7E98-47D7-BF9B-089019566D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8E1440D-7E98-47D7-BF9B-089019566D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8E1440D-7E98-47D7-BF9B-089019566D1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C875449-736B-482A-B66E-340FCCDF3824}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C875449-736B-482A-B66E-340FCCDF3824}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C875449-736B-482A-B66E-340FCCDF3824}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C875449-736B-482A-B66E-340FCCDF3824}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

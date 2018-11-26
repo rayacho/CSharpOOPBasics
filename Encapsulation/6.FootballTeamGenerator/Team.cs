@@ -7,18 +7,18 @@ namespace _6.FootballTeamGenerator
 {
 	class Team
 	{
-		private string name;
-		private HashSet<Player> players;
+		private string _name;
+		private HashSet<Player> _players;
 
 		public Team(string name)
 		{
 			this.Name = name;
-			this.players = new HashSet<Player>();
+			_players = new HashSet<Player>();
 		}
 
 		public string Name
 		{
-			get	{	return this.name;	}
+			get	{	return _name;	}
 			private set
 			{
 				if (string.IsNullOrWhiteSpace(value) || value == string.Empty)
@@ -26,15 +26,15 @@ namespace _6.FootballTeamGenerator
 					throw new ArgumentException("A name should not be empty.");
 				}
 
-				this.name = value;
+				_name = value;
 			}
 		}
 
 		public double GetRating()
 		{
-			if (this.players.Count > 0)
+			if (_players.Count > 0)
 			{
-				return this.players.Select(p => p.SkillLevel).Average();
+				return _players.Select(p => p.SkillLevel).Average();
 			}
 			else
 			{
@@ -44,12 +44,12 @@ namespace _6.FootballTeamGenerator
 
 		internal void AddPlayer(Player player)
 		{
-			this.players.Add(player);
+			_players.Add(player);
 		}
 
 		internal bool IsPlayerFound(string playerName)
 		{
-			return this.players.FirstOrDefault(p => p.Name == playerName) != null;
+			return _players.FirstOrDefault(p => p.Name == playerName) != null;
 		}
 
 		internal void RemovePlayer(string playerName)
@@ -59,9 +59,9 @@ namespace _6.FootballTeamGenerator
 				throw new NullReferenceException("Team does not existent");
 			}
 
-			if (this.players.Any(p => p.Name == playerName))
+			if (_players.Any(p => p.Name == playerName))
 			{
-				this.players.RemoveWhere(p => p.Name == playerName);
+				_players.RemoveWhere(p => p.Name == playerName);
 			}
 			else
 			{

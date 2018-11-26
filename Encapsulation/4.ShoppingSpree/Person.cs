@@ -6,13 +6,13 @@ namespace _4.ShoppingSpree
 {
 	class Person
 	{
-		private string name;
-		private decimal money;
-		private List<Product> Products { get; set; }
+		private string _name;
+		private decimal _money;
+		private List<Product> _Products { get; set; }
 
 		public Person()
 		{
-			this.Products = new List<Product>();
+			_Products = new List<Product>();
 		}
 
 		public Person(string name, decimal money):this()
@@ -23,7 +23,7 @@ namespace _4.ShoppingSpree
 
 		public string Name
 		{
-			get { return name; }
+			get { return _name; }
 			set
 			{
 				if(string.IsNullOrWhiteSpace(value))
@@ -31,13 +31,13 @@ namespace _4.ShoppingSpree
 					throw new ArgumentException("Name cannot be empty");
 				}
 
-				name = value;
+				_name = value;
 			}
 		}
 
 		private decimal Money
 		{
-			get { return money; }
+			get { return _money; }
 			set
 			{
 				if(value < 0)
@@ -45,7 +45,7 @@ namespace _4.ShoppingSpree
 					throw new ArgumentException("Money cannot be negative");
 				}
 
-				money = value;
+				_money = value;
 			}
 
 		}
@@ -54,19 +54,19 @@ namespace _4.ShoppingSpree
 		{
 			if (this.Money < product.Price)
 			{
-				return $"{this.name} can't afford {product.Name}";
+				return $"{_name} can't afford {product.Name}";
 			}
 
 			this.Money = Money - product.Price;
-			this.Products.Add(product);
+			_Products.Add(product);
 
-			return $"{this.name} bought {product.Name}";
+			return $"{_name} bought {product.Name}";
 		}
 
 		public override string ToString()
 		{
-			string productsOutput = this.Products.Count > 0 ?
-				string.Join(", ", this.Products) : "Nothing bought";
+			string productsOutput = _Products.Count > 0 ?
+				string.Join(", ", _Products) : "Nothing bought";
 			string result = $"{this.Name} - {productsOutput}";
 			return result;
 		}
