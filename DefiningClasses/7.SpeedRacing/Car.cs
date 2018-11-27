@@ -6,53 +6,53 @@ namespace _7.SpeedRacing
 {
 	class Car
 	{
-		private string model;
-		private double fuelAmount;
-		private double fuelConsumptionPerKm;
-		private double distanceTravelled;
+		private string _model;
+		private double _fuelAmount;
+		private double _fuelConsumptionPerKm;
+		private double _distanceTravelled;
 
 		public Car(string model, double fuelAmount, double fuelConsumptionPerKm)
 		{
-			this.model = model;
-			this.fuelAmount = fuelAmount;
-			this.fuelConsumptionPerKm = fuelConsumptionPerKm;
-			this.distanceTravelled = 0.0;
+			_model = model;
+			_fuelAmount = fuelAmount;
+			_fuelConsumptionPerKm = fuelConsumptionPerKm;
+			_distanceTravelled = 0.0;
 		}
 
 		public string Model
 		{
-			get { return this.model; }
+			get { return _model; }
 		}
 
 		public double FuelAmount
 		{
-			get { return this.fuelAmount; }
-			set { this.fuelAmount = value; }
+			get { return _fuelAmount; }
+			set { _fuelAmount = value; }
 		}
 
 		public double FuelConsumptionPerKm
 		{
-			get { return this.fuelConsumptionPerKm; }
+			get { return _fuelConsumptionPerKm; }
 		}
 
 		public double DistanceTravelled
 		{
-			get { return this.distanceTravelled; }
-			set { this.distanceTravelled = value; }
+			get { return _distanceTravelled; }
+			set { _distanceTravelled = value; }
 		}
 
 		public void Drive(double kilometers)
 		{
-			var neededFuel = kilometers * this.fuelConsumptionPerKm;
+			var neededFuel = kilometers * _fuelConsumptionPerKm;
 
-			if (this.fuelAmount < neededFuel)
+			if (this._fuelAmount < neededFuel)
 			{
-				System.Console.WriteLine("Insufficient fuel for the drive");
+				Console.WriteLine("Insufficient fuel for the drive");
 				return;
 			}
 
-			this.fuelAmount -= neededFuel;
-			this.distanceTravelled += kilometers;
+			_fuelAmount -= neededFuel;
+			_distanceTravelled += kilometers;
 		}
 	}
 }

@@ -6,24 +6,24 @@ namespace _11.PokemonTrainer
 {
 	class Pokemon
 	{
-		private string name;
-		private string element;
-		private int health;
+		private string _name;
+		private string _element;
+		private int _health;
 
 		public Pokemon(string name, string element, int health)
 		{
-			this.name = name;
-			this.element = element;
-			this.health = health;
+			_name = name;
+			_element = element;
+			_health = health;
 		}
 
-		public int Health { get { return this.health; } }
+		public int Health { get { return _health; } }
 
-		public string Element { get { return this.element; } }
+		public string Element { get { return _element; } }
 
 		public void ReduceHealth()
 		{
-			this.health -= 10;
+			_health -= 10;
 		}
 	}
 }

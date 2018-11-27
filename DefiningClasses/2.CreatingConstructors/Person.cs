@@ -6,8 +6,8 @@ namespace DefiningClasses
 {
 	public class Person
 	{
-		private string name;
-		private int age;
+		private string _name;
+		private int _age;
 
 		public Person() : this("No name", 1)
 		{
@@ -27,22 +27,22 @@ namespace DefiningClasses
 				throw new NullReferenceException("Invalid name");
 			}
 
-			this.name = name;
+			_name = name;
 		}
 
 		public Person(string name, int age) : this(name)
 		{
-			this.age = age;
+			_age = age;
 		}
 
 		public string Name
 		{
-			get { return this.name; }
+			get { return _name; }
 		}
 
 		public int Age
 		{
-			get { return this.age; }
+			get { return _age; }
 		}
 	}
 }

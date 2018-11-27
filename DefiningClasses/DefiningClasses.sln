@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.CreatingConstructors", "2
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3.OldestFamilyMember", "3.OldestFamilyMember\3.OldestFamilyMember.csproj", "{06A0D9F2-A36D-429B-8995-21474F49DCE1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "14.CatLady", "14.CatLady\14.CatLady.csproj", "{9F02A23F-AFD7-4583-885E-96BCFE25ACE0}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11.PokemonTrainer", "11.PokemonTrainer\11.PokemonTrainer.csproj", "{AA2D096B-9359-49DF-AED7-7488B052D3B2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6.CompanyRoster", "6.CompanyRoster\6.CompanyRoster.csproj", "{57A1B885-546E-434C-82DE-0DBB09F242F2}"
@@ -29,7 +27,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "7.SpeedRacing", "7.SpeedRac
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "12.Google", "12.Google\12.Google.csproj", "{33A7B71C-624E-4C50-A6D2-A486D2F22116}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.CarSalesman", "10.CarSalesman\10.CarSalesman.csproj", "{AFECE42C-5129-4680-B616-0975F0017E53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10.CarSalesman", "10.CarSalesman\10.CarSalesman.csproj", "{AFECE42C-5129-4680-B616-0975F0017E53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,10 +47,6 @@ Global
 		{06A0D9F2-A36D-429B-8995-21474F49DCE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06A0D9F2-A36D-429B-8995-21474F49DCE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06A0D9F2-A36D-429B-8995-21474F49DCE1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9F02A23F-AFD7-4583-885E-96BCFE25ACE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9F02A23F-AFD7-4583-885E-96BCFE25ACE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9F02A23F-AFD7-4583-885E-96BCFE25ACE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9F02A23F-AFD7-4583-885E-96BCFE25ACE0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AA2D096B-9359-49DF-AED7-7488B052D3B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AA2D096B-9359-49DF-AED7-7488B052D3B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA2D096B-9359-49DF-AED7-7488B052D3B2}.Release|Any CPU.ActiveCfg = Release|Any CPU

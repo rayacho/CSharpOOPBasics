@@ -6,13 +6,13 @@ namespace _12.Google
 {
 	public class Child
 	{
-		private string name;
-		private string birthday;
+		private string _name;
+		private string _birthday;
 
 		public Child(string name, string birthday)
 		{
-			this.Name = name;
-			this.birthday = birthday;
+			Name = name;
+			_birthday = birthday;
 		}
 
 		private string Name
@@ -24,13 +24,13 @@ namespace _12.Google
 					throw new ArgumentException($"{nameof(Child)}'s name can not be neither empty nor white space!!!");
 				}
 
-				this.name = value;
+				_name = value;
 			}
 		}
 
 		public override string ToString()
 		{
-			return $"{this.name} {this.birthday}";
+			return $"{_name} {_birthday}";
 		}
 	}
 }

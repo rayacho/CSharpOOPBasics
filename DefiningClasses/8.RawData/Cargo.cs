@@ -6,25 +6,25 @@ namespace _8.RawData
 {
 	public class Cargo
 	{
-		private int cargoWeight;
-		private string cargoType;
+		private int _cargoWeight;
+		private string _cargoType;
 
 		public Cargo(int cargoWeight, string cargoType)
 		{
-			this.CargoWeight = cargoWeight;
-			this.CargoType = cargoType;
+			CargoWeight = cargoWeight;
+			CargoType = cargoType;
 		}
 
 		public int CargoWeight
 		{
-			get { return cargoWeight; }
-			set { cargoWeight = value; }
+			get { return _cargoWeight; }
+			set { _cargoWeight = value; }
 		}
 
 		public string CargoType
 		{
-			get { return cargoType; }
-			set { cargoType = value; }
+			get { return _cargoType; }
+			set { _cargoType = value; }
 		}
 
 	}

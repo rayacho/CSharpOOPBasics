@@ -7,27 +7,27 @@ namespace _3.OldestFamilyMember
 {
 	public class Family
 	{
-		private List<Person> people;
+		private List<Person> _people;
 
 		public Family()
 		{
-			people = new List<Person>();
+			_people = new List<Person>();
 		}
 
 		public List<Person> People
 		{
-			get { return people; }
-			set { people = value; }
+			get { return _people; }
+			set { _people = value; }
 		}
 
 		public void AddMember(Person member)
 		{
-			people.Add(member);
+			_people.Add(member);
 		}
 
 		public Person GetOldestMember()
 		{
-			return people.OrderByDescending(m => m.Age).FirstOrDefault();
+			return _people.OrderByDescending(m => m.Age).FirstOrDefault();
 		}
 	}
 }

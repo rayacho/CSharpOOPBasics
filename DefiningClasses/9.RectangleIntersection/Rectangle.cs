@@ -6,33 +6,33 @@ namespace _9.RectangleIntersection
 {
 	class Rectangle
 	{
-		private string id;
-		private double width;
-		private double height;
-		private double topLeftX;
-		private double topLeftY;
+		private string _id;
+		private double _width;
+		private double _height;
+		private double _topLeftX;
+		private double _topLeftY;
 
 		public Rectangle(string id, double width, double height, double topLeftX, double topLeftY)
 		{
-			this.id = id;
-			this.width = Math.Abs(width);
-			this.height = Math.Abs(height);
-			this.topLeftX = topLeftX;
-			this.topLeftY = topLeftY;
+			_id = id;
+			_width = Math.Abs(width);
+			_height = Math.Abs(height);
+			_topLeftX = topLeftX;
+			_topLeftY = topLeftY;
 		}
 
 		public string Id
 		{
-			get { return id; }
-			set { id = value; }
+			get { return _id; }
+			set { _id = value; }
 		}
 
 		public bool IsThereIntersection(Rectangle rectangle)
 		{
-			return rectangle.topLeftX + rectangle.width >= this.topLeftX &&
-				rectangle.topLeftX <= this.topLeftX + this.width &&
-				rectangle.topLeftY >= this.topLeftY - this.height &&
-				rectangle.topLeftY - rectangle.height <= this.topLeftY;
+			return rectangle._topLeftX + rectangle._width >= _topLeftX &&
+				rectangle._topLeftX <= _topLeftX + _width &&
+				rectangle._topLeftY >= _topLeftY - _height &&
+				rectangle._topLeftY - rectangle._height <= _topLeftY;
 		}
 	}
 }

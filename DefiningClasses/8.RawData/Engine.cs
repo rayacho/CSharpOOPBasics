@@ -6,25 +6,25 @@ namespace _8.RawData
 {
 	public class Engine
 	{
-		private int speed;
-		private int power; 
+		private int _speed;
+		private int _power; 
 
 		public Engine(int speed, int power)
 		{
-			this.Speed = speed;
-			this.Power = power;
+			Speed = speed;
+			Power = power;
 		}
 
 		public int Speed
 		{
-			get { return speed; }
-			set { speed = value; }
+			get { return _speed; }
+			set { _speed = value; }
 		}
 
 		public int Power
 		{
-			get { return power; }
-			set { power = value; }
+			get { return _power; }
+			set { _power = value; }
 		}
 	}
 }

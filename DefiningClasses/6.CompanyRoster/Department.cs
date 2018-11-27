@@ -7,31 +7,31 @@ namespace _6.CompanyRoster
 {
 	class Department
 	{
-		private List<Employee> employees;
-		string name;
+		private List<Employee> _employees;
+		string _name;
 
 		public Department(string name)
 		{
-			this.Employees = new List<Employee>();
-			this.Name = name;
+			Employees = new List<Employee>();
+			Name = name;
 		}
 
 		public string Name
 		{
 			get
 			{
-				return this.name;
+				return _name;
 			}
 			set
 			{
-				this.name = value;
+				_name = value;
 			}
 		}
 
 		public List<Employee> Employees
 		{
-			get { return employees; }
-			private set { this.employees = value; }
+			get { return _employees; }
+			private set { _employees = value; }
 		}
 
 		public decimal AverageSalary => this.Employees.Select(e => e.Salary).Average();

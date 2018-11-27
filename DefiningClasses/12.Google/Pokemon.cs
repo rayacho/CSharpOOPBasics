@@ -6,18 +6,18 @@ namespace _12.Google
 {
 	public class Pokemon
 	{
-		private string name;
-		private string type;
+		private string _name;
+		private string _type;
 
 		public Pokemon(string name, string type)
 		{
-			this.name = name;
-			this.type = type;
+			_name = name;
+			_type = type;
 		}
 
 		public override string ToString()
 		{
-			return $"{this.name} {this.type}";
+			return $"{_name} {_type}";
 		}
 	}
 }

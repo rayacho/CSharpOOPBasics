@@ -6,20 +6,20 @@ namespace _12.Google
 {
 	public class Company
 	{
-		private string name;
-		private decimal salary;
-		private string department;
+		private string _name;
+		private decimal _salary;
+		private string _department;
 
 		public Company(string name, decimal salary, string department)
 		{
-			this.name = name;
-			this.salary = salary;
-			this.department = department;
+			_name = name;
+			_salary = salary;
+			_department = department;
 		}
 
 		public override string ToString()
 		{
-			return $"{this.name} {this.department} {this.salary:F2}";
+			return $"{_name} {_department} {_salary:F2}";
 		}
 	}
 }

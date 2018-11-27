@@ -6,24 +6,24 @@ namespace DefiningClasses
 {
 	public class Person
 	{
-		private string name;
-		private int age;
+		private string _name;
+		private int _age;
 
 		public Person(string name, int age)
 		{
-			this.name = name;
-			this.age = age;
+			_name = name;
+			_age = age;
 		}
 
 		public string Name
 		{
-			get { return name; }
-			set { name = value; }
+			get { return _name; }
+			set { _name = value; }
 		}
 		public int Age
 		{
-			get { return age; }
-			set { age = value; }
+			get { return _age; }
+			set { _age = value; }
 		}
 	}
 }

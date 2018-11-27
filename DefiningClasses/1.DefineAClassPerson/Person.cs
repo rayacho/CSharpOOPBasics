@@ -6,21 +6,22 @@ namespace DefiningClasses
 {
 	public class Person
 	{
-		private string name;
-		private int age;
+		private string _name;
+		private int _age;
+
 		public string Name
 		{
-			get { return name; }
-			set { name = value; }
+			get { return _name; }
+			set { _name = value; }
 		}
 		public int Age
 		{
-			get { return age; }
-			set { age = value; }
+			get { return _age; }
+			set { _age = value; }
 		}
 		public string NameAndAge()
 		{
-			return $"{this.name} {this.age}";
+			return $"{_name} {_age}";
 		}
 	}
 }

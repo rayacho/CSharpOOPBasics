@@ -7,26 +7,26 @@ namespace _12.Google
 {
 	public class Person
 	{
-		private string name;
-		private Company company;
-		private Car car;
-		private Queue<Pokemon> pokemons;
-		private Queue<Parent> parents;
-		private Queue<Child> children;
+		private string _name;
+		private Company _company;
+		private Car _car;
+		private Queue<Pokemon> _pokemons;
+		private Queue<Parent> _parents;
+		private Queue<Child> _children;
 
 		public Person(string name)
 		{
-			this.Name = name;
-			this.pokemons = new Queue<Pokemon>();
-			this.parents = new Queue<Parent>();
-			this.children = new Queue<Child>();
+			Name = name;
+			_pokemons = new Queue<Pokemon>();
+			_parents = new Queue<Parent>();
+			_children = new Queue<Child>();
 		}
 
 		public string Name
 		{
 			get
 			{
-				return this.name;
+				return _name;
 			}
 
 			private set
@@ -36,68 +36,68 @@ namespace _12.Google
 					throw new ArgumentException($"{nameof(Person)}'s name can not be neither empty nor white space!!!");
 				}
 
-				this.name = value;
+				_name = value;
 			}
 		}
 
 		public void AssignACompany(Company company)
 		{
-			this.company = company;
+			_company = company;
 		}
 
 		public void AssignACar(Car car)
 		{
-			this.car = car;
+			_car = car;
 		}
 
 		public void AddInCollection(Pokemon pokemon)
 		{
-			this.pokemons.Enqueue(pokemon);
+			_pokemons.Enqueue(pokemon);
 		}
 
 		public void AddInCollection(Parent parent)
 		{
-			this.parents.Enqueue(parent);
+			_parents.Enqueue(parent);
 		}
 
 		public void AddInCollection(Child child)
 		{
-			this.children.Enqueue(child);
+			_children.Enqueue(child);
 		}
 
 		public override string ToString()
 		{
 			var sb = new StringBuilder();
-			sb.AppendLine(this.name);
+			sb.AppendLine(_name);
 
 			sb.AppendLine("Company:");
-			if (this.company != null)
+			if (_company != null)
 			{
-				sb.AppendLine(this.company.ToString());
+				sb.AppendLine(this._company.ToString());
 			}
 
 			sb.AppendLine("Car:");
-			if (this.car != null)
+			if (_car != null)
 			{
-				sb.AppendLine(this.car.ToString());
+				sb.AppendLine(this._car.ToString());
 			}
 
 			sb.AppendLine("Pokemon:");
-			if (this.pokemons.Count > 0)
+			if (_pokemons.Count > 0)
 			{
-				sb.AppendLine(string.Join(Environment.NewLine, this.pokemons.Select(pok => pok.ToString())));
+				sb.AppendLine(string.Join(Environment.NewLine, this._pokemons.Select(pok => pok.ToString())));
 			}
 
 			sb.AppendLine("Parents:");
-			if (this.parents.Count > 0)
+			if (_parents.Count > 0)
 			{
-				sb.AppendLine(string.Join(Environment.NewLine, this.parents.Select(par => par.ToString())));
+				sb.AppendLine(string.Join(Environment.NewLine, this._parents.Select(par => par.ToString())));
 			}
 
 			sb.AppendLine("Children:");
-			if (this.children.Count > 0)
+			if (_children.Count > 0)
 			{
-				sb.AppendLine(string.Join(Environment.NewLine, this.children.Select(c => c.ToString())));
+				sb.AppendLine(string.Join(Environment.NewLine, this._children.Select(c => c.ToString())));
 			}
 
 			return sb.ToString();
