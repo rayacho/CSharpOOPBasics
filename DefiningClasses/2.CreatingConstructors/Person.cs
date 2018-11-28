@@ -19,19 +19,9 @@ namespace DefiningClasses
 
 		}
 
-		public Person(string name)
+		public Person(string name, int age)
 		{
-	
-			if (string.IsNullOrEmpty(name))
-			{
-				throw new NullReferenceException("Invalid name");
-			}
-
 			_name = name;
-		}
-
-		public Person(string name, int age) : this(name)
-		{
 			_age = age;
 		}
 

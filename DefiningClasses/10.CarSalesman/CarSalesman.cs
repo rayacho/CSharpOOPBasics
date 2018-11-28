@@ -21,21 +21,25 @@ namespace _10.CarSalesman
 
 				if (parameters.Length == 3 && int.TryParse(parameters[2], out displacement))
 				{
-					engines.Add(new Engine(model, power, displacement));
+					Engine engine = new Engine(model, power, displacement);
+					engines.Add(engine);
 				}
 				else if (parameters.Length == 3)
 				{
 					string efficiency = parameters[2];
-					engines.Add(new Engine(model, power, efficiency));
+					Engine engine = new Engine(model, power, efficiency);
+					engines.Add(engine);
 				}
 				else if (parameters.Length == 4)
 				{
 					string efficiency = parameters[3];
-					engines.Add(new Engine(model, power, int.Parse(parameters[2]), efficiency));
+					Engine engine = new Engine(model, power, int.Parse(parameters[2]), efficiency);
+					engines.Add(engine);
 				}
 				else
 				{
-					engines.Add(new Engine(model, power));
+					Engine engine = new Engine(model, power);
+					engines.Add(engine);
 				}
 			}
 
@@ -51,25 +55,29 @@ namespace _10.CarSalesman
 
 				if (parameters.Length == 3 && int.TryParse(parameters[2], out weight))
 				{
-					cars.Add(new Car(model, engine, weight));
+					Car car = new Car(model, engine, weight);
+					cars.Add(car);
 				}
 				else if (parameters.Length == 3)
 				{
 					string color = parameters[2];
-					cars.Add(new Car(model, engine, color));
+					Car car = new Car(model, engine, color);
+					cars.Add(car);
 				}
 				else if (parameters.Length == 4)
 				{
 					string color = parameters[3];
-					cars.Add(new Car(model, engine, int.Parse(parameters[2]), color));
+					Car car = new Car(model, engine, int.Parse(parameters[2]), color);
+					cars.Add(car);
 				}
 				else
 				{
-					cars.Add(new Car(model, engine));
+					Car car = new Car(model, engine);
+					cars.Add(car);
 				}
 			}
 
-			foreach (var car in cars)
+			foreach (Car car in cars)
 			{
 				Console.WriteLine(car);
 			}

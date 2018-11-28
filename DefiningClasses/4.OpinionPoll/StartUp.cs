@@ -9,27 +9,34 @@ namespace _4.OpinionPoll
 	{
 		static void Main(string[] args)
 		{
-			var people = GetPeople();
+			HashSet<Person> people = GetPeople();
 			PrintPeopleOlderThan30(people);
 		}
 
 		private static void PrintPeopleOlderThan30(HashSet<Person> people)
 		{
-			Console.WriteLine(string.Join(Environment.NewLine, people
+			IEnumerable<string> peoples = people
 				.Where(p => p.Age > 30)
 				.OrderBy(p => p.Name)
-				.Select(p => $"{p.Name} - {p.Age}")));
+				.Select(p => $"{p.Name} - {p.Age}");
+
+			string print = string.Join(Environment.NewLine, peoples);
+
+			Console.WriteLine(print);
 		}
 
 		private static HashSet<Person> GetPeople()
 		{
 			var people = new HashSet<Person>();
-			var numberOfPeople = int.Parse(Console.ReadLine());
+			int numberOfPeople = int.Parse(Console.ReadLine());
 
 			while (numberOfPeople > 0)
 			{
-				var personData = Console.ReadLine().Split();
-				people.Add(new Person(personData[0], int.Parse(personData[1])));
+				string[] personData = Console.ReadLine().Split();
+				string name = personData[0];
+				int age = int.Parse(personData[1]);
+				var person = new Person(name, age);
+				people.Add(person);
 				numberOfPeople--;
 			}
 

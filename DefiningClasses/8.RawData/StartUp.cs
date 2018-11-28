@@ -66,7 +66,7 @@ namespace _8.RawData
 				resultCars = cars.Where(x => x.Cargo.CargoType == "flamable" && x.Engine.Power > 250).ToList();
 			}
 
-			foreach (var c in resultCars)
+			foreach (Car c in resultCars)
 			{
 				Console.WriteLine(c.Model);
 			}

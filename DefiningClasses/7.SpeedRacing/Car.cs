@@ -43,9 +43,14 @@ namespace _7.SpeedRacing
 
 		public void Drive(double kilometers)
 		{
-			var neededFuel = kilometers * _fuelConsumptionPerKm;
+			if(kilometers == 0)
+			{
+				throw new ArgumentNullException();
+			}
 
-			if (this._fuelAmount < neededFuel)
+			double neededFuel = kilometers * _fuelConsumptionPerKm;
+
+			if (_fuelAmount < neededFuel)
 			{
 				Console.WriteLine("Insufficient fuel for the drive");
 				return;

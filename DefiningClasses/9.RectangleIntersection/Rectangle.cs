@@ -29,10 +29,15 @@ namespace _9.RectangleIntersection
 
 		public bool IsThereIntersection(Rectangle rectangle)
 		{
-			return rectangle._topLeftX + rectangle._width >= _topLeftX &&
+			if(rectangle == null)
+			{
+				throw new ArgumentNullException();
+			}
+			bool result = rectangle._topLeftX + rectangle._width >= _topLeftX &&
 				rectangle._topLeftX <= _topLeftX + _width &&
 				rectangle._topLeftY >= _topLeftY - _height &&
 				rectangle._topLeftY - rectangle._height <= _topLeftY;
+			return result;
 		}
 	}
 }

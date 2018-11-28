@@ -34,11 +34,16 @@ namespace _6.CompanyRoster
 			private set { _employees = value; }
 		}
 
-		public decimal AverageSalary => this.Employees.Select(e => e.Salary).Average();
+		public decimal AverageSalary => Employees.Select(e => e.Salary).Average();
 
 		public void AddEmployee(Employee employee)
 		{
-			this.Employees.Add(employee);
+			if (employee == null)
+			{
+				throw new ArgumentNullException();
+			}
+
+			Employees.Add(employee);
 		}
 	}
 }

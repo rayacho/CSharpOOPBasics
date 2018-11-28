@@ -20,6 +20,7 @@ namespace DefiningClasses
 			get { return _name; }
 			set { _name = value; }
 		}
+
 		public int Age
 		{
 			get { return _age; }

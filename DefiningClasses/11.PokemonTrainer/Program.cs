@@ -10,29 +10,31 @@ namespace _11.PokemonTrainer
 
 		public static void Main()
 		{
-			var trainers = GetTrainers();
+			Queue<Trainer> trainers = GetTrainers();
 			PlayWithElements(trainers);
 			PrintTrainers(trainers);
 		}
 
 		private static void PrintTrainers(Queue<Trainer> trainers)
 		{
-			Console.WriteLine(string.Join(Environment.NewLine, trainers
+			string result = string.Join(Environment.NewLine, trainers
 				.OrderByDescending(t => t.Badges)
-				.Select(t => $"{t.Name} {t.Badges} {t.Pokemons.Count}")));
+				.Select(t => $"{t.Name} {t.Badges} {t.Pokemons.Count}"));
+			Console.WriteLine();
 		}
 
 		private static void PlayWithElements(Queue<Trainer> trainers)
 		{
-			var element = Console.ReadLine().Trim();
+			string element = Console.ReadLine().Trim();
 
 			while (element != "End")
 			{
-				foreach (var trainer in trainers)
+				foreach (Trainer trainer in trainers)
 				{
-					if (trainer.Pokemons.Where(p => p.Element == element).FirstOrDefault() == null)
+					Pokemon first = trainer.Pokemons.Where(p => p.Element == element).FirstOrDefault();
+					if (first == null)
 					{
-						foreach (var pokemon in trainer.Pokemons)
+						foreach (Pokemon pokemon in trainer.Pokemons)
 						{
 							pokemon.ReduceHealth();
 						}
@@ -52,16 +54,16 @@ namespace _11.PokemonTrainer
 		private static Queue<Trainer> GetTrainers()
 		{
 			var trainers = new Queue<Trainer>();
-			var playerData = Console.ReadLine().Split().Select(x => x.Trim()).ToArray();
+			string[] playerData = Console.ReadLine().Split().Select(x => x.Trim()).ToArray();
 
 			while (playerData[0] != "Tournament")
 			{
-				var trainerName = playerData[0];
-				var pokemonName = playerData[1];
-				var element = playerData[2];
-				var health = int.Parse(playerData[3]);
-				var currentPokemon = new Pokemon(pokemonName, element, health);
-				var currentTrainer = trainers.Where(t => t.Name == trainerName).FirstOrDefault();
+				string trainerName = playerData[0];
+				string pokemonName = playerData[1];
+				string element = playerData[2];
+				int health = int.Parse(playerData[3]);
+				Pokemon currentPokemon = new Pokemon(pokemonName, element, health);
+				Trainer currentTrainer = trainers.Where(t => t.Name == trainerName).FirstOrDefault();
 
 				if (currentTrainer == null)
 				{

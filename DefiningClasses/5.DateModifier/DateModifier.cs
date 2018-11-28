@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Globalization;
 
 namespace _5.DateModifier
@@ -9,16 +7,29 @@ namespace _5.DateModifier
 	{
 		public static double GetDaysBetweenDates(string dateOne, string dateTwo)
 		{
+			if (string.IsNullOrEmpty(dateOne))
+			{
+				throw new ArgumentNullException(nameof(dateOne));
+			}
+
+			if (string.IsNullOrEmpty(dateTwo))
+			{
+				throw new ArgumentNullException(nameof(dateTwo));
+			}
+
 			var firstDate = DateTime.ParseExact(dateOne, "yyyy MM dd", CultureInfo.InvariantCulture);
 			var secondDate = DateTime.ParseExact(dateTwo, "yyyy MM dd", CultureInfo.InvariantCulture);
 
+			double result;
 			if (firstDate > secondDate)
-
 			{
-				return GetDaysBetweenDates(dateTwo, dateOne);
+				result = GetDaysBetweenDates(dateTwo, dateOne);
+				return result;
 			}
 
-			return (secondDate - firstDate).Days;
+			result = (secondDate - firstDate).Days;
+
+			return result;
 		}
 	}
 }

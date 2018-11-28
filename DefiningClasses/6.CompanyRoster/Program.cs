@@ -22,16 +22,23 @@ namespace _6.CompanyRoster
 					departments.Add(dep);
 				}
 
-				Department department = departments.FirstOrDefault(d => d.Name == departmentName);
+				Department department = departments
+					.FirstOrDefault(d => d.Name == departmentName);
+
 				Employee employee = ParseEmployee(emptyInput);
 				department.AddEmployee(employee);
 			}
 
-			var maxAverageSalary = departments.OrderByDescending(d => d.AverageSalary).First();
+			Department maxAverageSalary = departments
+				.OrderByDescending(d => d.AverageSalary)
+				.First();
 
 			Console.WriteLine($"Highest Average Salary: {maxAverageSalary.Name}");
 
-			foreach (var emp in maxAverageSalary.Employees.OrderByDescending(e => e.Salary))
+			IOrderedEnumerable<Employee> employees = maxAverageSalary.Employees
+				.OrderByDescending(e => e.Salary);
+
+			foreach (Employee emp in employees)
 			{
 				Console.WriteLine($"{emp.Name} {emp.Salary:f2} {emp.Email} {emp.Age}");
 			}
@@ -39,8 +46,12 @@ namespace _6.CompanyRoster
 
 		static Employee ParseEmployee(string[] emptyInput)
 		{
+			if(emptyInput == null)
+			{
+				throw new ArgumentNullException();
+			}
 			string name = emptyInput[0];
-			decimal salary = Decimal.Parse(emptyInput[1]);
+			decimal salary = decimal.Parse(emptyInput[1]);
 			string position = emptyInput[2];
 			string email = "n/a";
 			int age = -1;

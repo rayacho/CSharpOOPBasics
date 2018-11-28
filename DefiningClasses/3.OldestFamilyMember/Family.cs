@@ -22,6 +22,11 @@ namespace _3.OldestFamilyMember
 
 		public void AddMember(Person member)
 		{
+			if (member == null)
+			{
+				throw new ArgumentNullException(nameof(member));
+			}
+
 			_people.Add(member);
 		}
 

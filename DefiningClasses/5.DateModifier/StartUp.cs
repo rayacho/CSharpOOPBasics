@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 
 namespace _5.DateModifier
 {
@@ -7,9 +6,10 @@ namespace _5.DateModifier
 	{
 		static void Main(string[] args)
 		{
-			var firstDate = Console.ReadLine();
-			var secondDate = Console.ReadLine();
-			Console.WriteLine(DateModifier.GetDaysBetweenDates(firstDate, secondDate));
+			string firstDate = Console.ReadLine();
+			string secondDate = Console.ReadLine();
+			var print = DateModifier.GetDaysBetweenDates(firstDate, secondDate);
+			Console.WriteLine(print);
 		}	
 	}
 }
