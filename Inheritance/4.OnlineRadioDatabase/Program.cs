@@ -33,11 +33,11 @@ namespace _4.OnlineRadioDatabase
 
 			while (numberOfSongs > 0)
 			{
-				var songDetails = Console.ReadLine().Split(';');
+				string[] songDetails = Console.ReadLine().Split(';');
 
 				try
 				{
-					var indexOfMinuteSecondSeparation = songDetails[2].IndexOf(':');
+					int indexOfMinuteSecondSeparation = songDetails[2].IndexOf(':');
 
 					if (songDetails.Length < 3 || indexOfMinuteSecondSeparation < 1 ||
 						indexOfMinuteSecondSeparation > songDetails[2].Length - 2)
@@ -45,10 +45,10 @@ namespace _4.OnlineRadioDatabase
 						throw new InvalidSongException();
 					}
 
-					var artist = songDetails[0];
-					var songName = songDetails[1];
-					var minutes = int.Parse(songDetails[2].Substring(0, indexOfMinuteSecondSeparation));
-					var seconds = int.Parse(songDetails[2].Substring(indexOfMinuteSecondSeparation + 1));
+					string artist = songDetails[0];
+					string songName = songDetails[1];
+					int minutes = int.Parse(songDetails[2].Substring(0, indexOfMinuteSecondSeparation));
+					int seconds = int.Parse(songDetails[2].Substring(indexOfMinuteSecondSeparation + 1));
 
 					songs.Push(new Song(artist, songName, minutes, seconds));
 					Console.WriteLine("Song added.");

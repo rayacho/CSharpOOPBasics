@@ -7,7 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.Person", "01.Person\01.P
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2.BookShop", "2.BookShop\2.BookShop.csproj", "{AB5545C0-15EC-494E-A054-2CD99844DDC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4.OnlineRadioDatabase", "4.OnlineRadioDatabase\4.OnlineRadioDatabase.csproj", "{2C6AC50C-9D63-4548-A3E4-5514F038C973}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4.OnlineRadioDatabase", "4.OnlineRadioDatabase\4.OnlineRadioDatabase.csproj", "{2C6AC50C-9D63-4548-A3E4-5514F038C973}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3.Mankind", "3.Mankind\3.Mankind.csproj", "{03922C89-4F32-4426-B12C-AC39ACB42C17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6.Animals", "6.Animals\6.Animals.csproj", "{0A5B5C3B-A017-4455-88F6-2725187C4629}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{2C6AC50C-9D63-4548-A3E4-5514F038C973}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C6AC50C-9D63-4548-A3E4-5514F038C973}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C6AC50C-9D63-4548-A3E4-5514F038C973}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03922C89-4F32-4426-B12C-AC39ACB42C17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03922C89-4F32-4426-B12C-AC39ACB42C17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03922C89-4F32-4426-B12C-AC39ACB42C17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03922C89-4F32-4426-B12C-AC39ACB42C17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A5B5C3B-A017-4455-88F6-2725187C4629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A5B5C3B-A017-4455-88F6-2725187C4629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A5B5C3B-A017-4455-88F6-2725187C4629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A5B5C3B-A017-4455-88F6-2725187C4629}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
