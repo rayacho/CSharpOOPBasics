@@ -11,14 +11,26 @@ namespace DefiningClasses
 
 		public string Name
 		{
-			get { return _name; }
-			set { _name = value; }
+			get
+			{
+				return _name;
+			}
+			set
+			{
+				_name = value;
+			}
 		}
 
 		public int Age
 		{
-			get { return _age; }
-			set { _age = value; }
+			get
+			{
+				return _age;
+			}
+			set
+			{
+				_age = value;
+			}
 		}
 
 		public string NameAndAge()

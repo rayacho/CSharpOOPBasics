@@ -8,7 +8,7 @@ namespace _5.DateModifier
 		{
 			string firstDate = Console.ReadLine();
 			string secondDate = Console.ReadLine();
-			var print = DateModifier.GetDaysBetweenDates(firstDate, secondDate);
+			double print = DateModifier.GetDaysBetweenDates(firstDate, secondDate);
 			Console.WriteLine(print);
 		}	
 	}

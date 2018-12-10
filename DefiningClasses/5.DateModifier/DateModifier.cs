@@ -17,8 +17,8 @@ namespace _5.DateModifier
 				throw new ArgumentNullException(nameof(dateTwo));
 			}
 
-			var firstDate = DateTime.ParseExact(dateOne, "yyyy MM dd", CultureInfo.InvariantCulture);
-			var secondDate = DateTime.ParseExact(dateTwo, "yyyy MM dd", CultureInfo.InvariantCulture);
+			DateTime firstDate = DateTime.ParseExact(dateOne, "yyyy MM dd", CultureInfo.InvariantCulture);
+			DateTime secondDate = DateTime.ParseExact(dateTwo, "yyyy MM dd", CultureInfo.InvariantCulture);
 
 			double result;
 			if (firstDate > secondDate)

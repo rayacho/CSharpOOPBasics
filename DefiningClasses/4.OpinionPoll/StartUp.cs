@@ -27,7 +27,7 @@ namespace _4.OpinionPoll
 
 		private static HashSet<Person> GetPeople()
 		{
-			var people = new HashSet<Person>();
+			HashSet<Person> people = new HashSet<Person>();
 			int numberOfPeople = int.Parse(Console.ReadLine());
 
 			while (numberOfPeople > 0)
@@ -35,7 +35,7 @@ namespace _4.OpinionPoll
 				string[] personData = Console.ReadLine().Split();
 				string name = personData[0];
 				int age = int.Parse(personData[1]);
-				var person = new Person(name, age);
+				Person person = new Person(name, age);
 				people.Add(person);
 				numberOfPeople--;
 			}

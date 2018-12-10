@@ -6,8 +6,8 @@ namespace _6.FootballTeamGenerator
 {
 	class Player
 	{
-		private const int MinStatsValue = 0;
-		private const int MaxStatsValue = 100;
+		private const int _MinStatsValue = 0;
+		private const int _MaxStatsValue = 100;
 
 		private string _name;
 		private double _endurance;
@@ -19,18 +19,21 @@ namespace _6.FootballTeamGenerator
 
 		public Player(string name, double endurance, double sprint, double dribble, double passing, double shooting)
 		{
-			this.Name = name;
-			this.Endurance = endurance;
-			this.Sprint = sprint;
-			this.Dribble = dribble;
-			this.Passing = passing;
-			this.Shooting = shooting;
+			Name = name;
+			Endurance = endurance;
+			Sprint = sprint;
+			Dribble = dribble;
+			Passing = passing;
+			Shooting = shooting;
 			_skillLevel = (endurance + sprint + dribble + passing + shooting) / 5;
 		}
 
 		public string Name
 		{
-			get	{	return _name;	}
+			get
+			{
+				return _name;
+			}
 
 			private set
 			{
@@ -43,13 +46,19 @@ namespace _6.FootballTeamGenerator
 			}
 		}
 
-		public double SkillLevel { get { return _skillLevel; } }
+		public double SkillLevel
+		{
+			get
+			{
+				return _skillLevel;
+			}
+		}
 
 		private double Shooting
 		{
 			set
 			{
-				this.ValidateStat(value, nameof(this.Shooting));
+				ValidateStat(value, nameof(this.Shooting));
 				_shooting = value;
 			}
 		}
@@ -58,7 +67,7 @@ namespace _6.FootballTeamGenerator
 		{
 			set
 			{
-				this.ValidateStat(value, nameof(this.Passing));
+				ValidateStat(value, nameof(Passing));
 				_passing = value;
 			}
 		}
@@ -67,7 +76,7 @@ namespace _6.FootballTeamGenerator
 		{
 			set
 			{
-				this.ValidateStat(value, nameof(this.Dribble));
+				ValidateStat(value, nameof(Dribble));
 				_dribble = value;
 			}
 		}
@@ -76,7 +85,7 @@ namespace _6.FootballTeamGenerator
 		{
 			set
 			{
-				this.ValidateStat(value, nameof(this.Sprint));
+				ValidateStat(value, nameof(Sprint));
 				_sprint = value;
 			}
 		}
@@ -85,14 +94,14 @@ namespace _6.FootballTeamGenerator
 		{
 			set
 			{
-				this.ValidateStat(value, nameof(this.Endurance));
+				ValidateStat(value, nameof(Endurance));
 				_endurance = value;
 			}
 		}
 
 		private void ValidateStat(double stat, string propertyName)
 		{
-			if (stat < MinStatsValue || stat > MaxStatsValue)
+			if (stat < _MinStatsValue || stat > _MaxStatsValue)
 			{
 				throw new ArgumentException($"{propertyName} should be between 0 and 100.");
 			}

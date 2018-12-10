@@ -10,7 +10,7 @@ namespace _1.ClassBox
 			double width = double.Parse(Console.ReadLine());
 			double height = double.Parse(Console.ReadLine());
 
-			var box = new Box(length, width, height);
+			Box box = new Box(length, width, height);
 
 			double surfaceArea = box.SurfaceArea();
 			double lateralSurfaceArea = box.LateralSurfaceArea();

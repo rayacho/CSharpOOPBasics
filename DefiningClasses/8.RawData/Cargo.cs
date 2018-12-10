@@ -17,14 +17,26 @@ namespace _8.RawData
 
 		public int CargoWeight
 		{
-			get { return _cargoWeight; }
-			set { _cargoWeight = value; }
+			get
+			{
+				return _cargoWeight;
+			}
+			set
+			{
+				_cargoWeight = value;
+			}
 		}
 
 		public string CargoType
 		{
-			get { return _cargoType; }
-			set { _cargoType = value; }
+			get
+			{
+				return _cargoType;
+			}
+			set
+			{
+				_cargoType = value;
+			}
 		}
 
 	}

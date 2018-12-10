@@ -12,13 +12,16 @@ namespace _6.FootballTeamGenerator
 
 		public Team(string name)
 		{
-			this.Name = name;
+			Name = name;
 			_players = new HashSet<Player>();
 		}
 
 		public string Name
 		{
-			get	{	return _name;	}
+			get
+			{
+				return _name;
+			}
 			private set
 			{
 				if (string.IsNullOrWhiteSpace(value) || value == string.Empty)

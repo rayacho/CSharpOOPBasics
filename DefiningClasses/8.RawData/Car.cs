@@ -21,26 +21,50 @@ namespace _8.RawData
 
 		public string Model
 		{
-			get { return _model; }
-			set { _model = value; }
+			get
+			{
+				return _model;
+			}
+			set
+			{
+				_model = value;
+			}
 		}
 
 		public Engine Engine
 		{
-			get { return _engine; }
-			set { _engine = value; }
+			get
+			{
+				return _engine;
+			}
+			set
+			{
+				_engine = value;
+			}
 		}
 
 		public Cargo Cargo
 		{
-			get { return _cargo; }
-			set { _cargo = value; }
+			get
+			{
+				return _cargo;
+			}
+			set
+			{
+				_cargo = value;
+			}
 		}
 
 		public List<Tire> Tires
 		{
-			get { return _tires; }
-			set { _tires = value; }
+			get
+			{
+				return _tires;
+			}
+			set
+			{
+				_tires = value;
+			}
 		}
 	}
 }

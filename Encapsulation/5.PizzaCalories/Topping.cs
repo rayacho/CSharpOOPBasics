@@ -7,9 +7,11 @@ namespace _5.PizzaCalories
 {
 	class Topping
 	{
-		private const int minWeight = 1;
-		private const int maxWeight = 50;
-		private const int defaultMultiplier = 2;
+		private const int _minWeight = 1;
+		private const int _maxWeight = 50;
+		private const int _defaultMultiplier = 2;
+		private string _type;
+		private double _weight;
 
 		private Dictionary<string, double> validTypes = new Dictionary<string, double>
 		{
@@ -19,47 +21,50 @@ namespace _5.PizzaCalories
 			["sauce"] = 0.9,
 		};
 
-		private string type;
-		private double weight;
-
 		public Topping(string type, double weight)
 		{
-			this.Type = type;
+			Type = type;
 			ValidateWeight(type, weight);
-			this.Weight = weight;
+			Weight = weight;
 		}
 
-		private double typeMultiplier => validTypes[type];
-		public double Calories => defaultMultiplier * this.Weight * typeMultiplier;
+		private double typeMultiplier => validTypes[_type];
+		public double Calories => _defaultMultiplier * Weight * typeMultiplier;
 
 		private void ValidateWeight(string type, double weight)
 		{
-			if (weight < minWeight || weight > maxWeight)
+			if (weight < _minWeight || weight > _maxWeight)
 			{
-				throw new ArgumentException($"{type} weight should be in the range [{minWeight}..{maxWeight}].");
+				throw new ArgumentException($"{type} weight should be in the range [{_minWeight}..{_maxWeight}].");
 			}
 		}
 
 		public string Type
 		{
-			get { return type; }
+			get
+			{
+				return _type;
+			}
 			set
 			{
-				if (!this.validTypes.Any(t => t.Key == value.ToLower()))
+				if (!validTypes.Any(t => t.Key == value.ToLower()))
 				{
 					throw new ArgumentException($"Cannot place {value} on top of your pizza.");
 				}
 
-				type = value.ToLower();
+				_type = value.ToLower();
 			}
 		}
 
 		public double Weight
 		{
-			get { return weight; }
+			get
+			{
+				return _weight;
+			}
 			set
 			{
-				weight = value;
+				_weight = value;
 			}
 		}
 	}

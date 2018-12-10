@@ -23,8 +23,14 @@ namespace _9.RectangleIntersection
 
 		public string Id
 		{
-			get { return _id; }
-			set { _id = value; }
+			get
+			{
+				return _id;
+			}
+			set
+			{
+				_id = value;
+			}
 		}
 
 		public bool IsThereIntersection(Rectangle rectangle)
@@ -33,6 +39,7 @@ namespace _9.RectangleIntersection
 			{
 				throw new ArgumentNullException();
 			}
+
 			bool result = rectangle._topLeftX + rectangle._width >= _topLeftX &&
 				rectangle._topLeftX <= _topLeftX + _width &&
 				rectangle._topLeftY >= _topLeftY - _height &&

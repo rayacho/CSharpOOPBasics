@@ -11,16 +11,15 @@ namespace _04.Hospital
 			Dictionary<string, List<string>> doctors = new Dictionary<string, List<string>>();
 			Dictionary<string, List<List<string>>> departments = new Dictionary<string, List<List<string>>>();
 
-
 			string command = Console.ReadLine();
 			while (command != "Output")
 			{
 				string[] tokens = command.Split();
-				var department = tokens[0];
-				var firstName = tokens[1];
-				var secondName = tokens[2];
-				var patient = tokens[3];
-				var fullName = firstName + secondName;
+				string department = tokens[0];
+				string firstName = tokens[1];
+				string secondName = tokens[2];
+				string patient = tokens[3];
+				string fullName = firstName + secondName;
 
 				if (!doctors.ContainsKey(firstName + secondName))
 				{

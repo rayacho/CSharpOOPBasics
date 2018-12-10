@@ -11,13 +11,16 @@ namespace _4.ShoppingSpree
 
 		public Product(string productName, decimal productPrice)
 		{
-			this.Name = productName;
-			this.Price = productPrice;
+			Name = productName;
+			Price = productPrice;
 		}
 
 		public string Name
 		{
-			get { return _name; }
+			get
+			{
+				return _name;
+			}
 			set
 			{
 				if (string.IsNullOrWhiteSpace(value))
@@ -31,7 +34,10 @@ namespace _4.ShoppingSpree
 
 		public decimal Price
 		{
-			get { return _price; }
+			get
+			{
+				return _price;
+			}
 			set
 			{
 				if (value < 0)
@@ -45,7 +51,7 @@ namespace _4.ShoppingSpree
 
 		public override string ToString()
 		{
-			return this.Name;
+			return Name;
 		}
 	}
 }

@@ -41,7 +41,7 @@ namespace _7.SpeedRacing
 
 		private static Queue<Car> GetCars()
 		{
-			var cars = new Queue<Car>();
+			Queue<Car> cars = new Queue<Car>();
 			int numberOfCars = int.Parse(Console.ReadLine());
 
 			while (cars.Count < numberOfCars)

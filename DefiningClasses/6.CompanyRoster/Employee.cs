@@ -23,32 +23,62 @@ namespace _6.CompanyRoster
 
 		public string Name
 		{
-			get { return _name; }
-			set { _name = value; }
+			get
+			{
+				return _name;
+			}
+			set
+			{
+				_name = value;
+			}
 		}
 
 		public decimal Salary
 		{
-			get { return _salary; }
-			set { _salary = value; }
+			get
+			{
+				return _salary;
+			}
+			set
+			{
+				_salary = value;
+			}
 		}
 
 		public int Age
 		{
-			get { return _age; }
-			set { _age = value; }
+			get
+			{
+				return _age;
+			}
+			set
+			{
+				_age = value;
+			}
 		}
 
 		public string Email
 		{
-			get { return _email; }
-			set { _email = value; }
+			get
+			{
+				return _email;
+			}
+			set
+			{
+				_email = value;
+			}
 		}
 
 		public string Position
 		{
-			get { return _position; }
-			set { _position = value; }
+			get
+			{
+				return _position;
+			}
+			set
+			{
+				_position = value;
+			}
 		}
 	}
 }

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace _5.PizzaCalories
 {
@@ -15,32 +14,35 @@ namespace _5.PizzaCalories
 
 		public Pizza()
 		{
-			this.Toppings = new List<Topping>();
+			Toppings = new List<Topping>();
 		}
 
 		public Pizza(string name) : this()
 		{
-			this.Name = name;
+			Name = name;
 		}
 
 		private double ToppingsCalories
 		{
 			get
 			{
-				if (this.Toppings.Count == 0)
+				if (Toppings.Count == 0)
 				{
 					return 0;
 				}
 
-				return this.Toppings.Select(t => t.Calories).Sum();
+				return Toppings.Select(t => t.Calories).Sum();
 			}
 		}
 
-		private double Calories => this.Dough.Calories + this.ToppingsCalories;
+		private double Calories => Dough.Calories + ToppingsCalories;
 
 		private string Name
 		{
-			get { return name; }
+			get
+			{
+				return name;
+			}
 			set
 			{
 				if (string.IsNullOrEmpty(value) || value.Length > maxLength)
@@ -57,23 +59,23 @@ namespace _5.PizzaCalories
 
 		public void SetDough(Dough dough)
 		{
-			this.Dough = dough;
+			Dough = dough;
 		}
 
 		public void AddToping(Topping topping)
 		{
-			if (this.Toppings.Count > maxTopping)
+			if (Toppings.Count > maxTopping)
 			{
 				throw new ArgumentException($"Number of toppings should be in range [{minTopping}..{maxTopping}].");
 
 			}
 
-			this.Toppings.Add(topping);
+			Toppings.Add(topping);
 		}
 
 		public override string ToString()
 		{
-			return $"{this.Name} - {this.Calories:f2} Calories.";
+			return $"{Name} - {Calories:f2} Calories.";
 		}
 	}
 }

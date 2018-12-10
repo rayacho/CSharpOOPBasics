@@ -13,8 +13,8 @@ namespace _6.FootballTeamGenerator
 
 		private static void GenerateTeams()
 		{
-			var teams = new HashSet<Team>();
-			var command = Console.ReadLine().Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+			HashSet<Team> teams = new HashSet<Team>();
+			string[] command = Console.ReadLine().Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
 
 			while (command[0] != "END")
 			{
@@ -49,7 +49,7 @@ namespace _6.FootballTeamGenerator
 
 		private static void PrintRating(HashSet<Team> teams, string[] command)
 		{
-			var team = teams.FirstOrDefault(t => t.Name == command[1]);
+			Team team = teams.FirstOrDefault(t => t.Name == command[1]);
 
 			if (team == null)
 			{
@@ -64,7 +64,7 @@ namespace _6.FootballTeamGenerator
 		{
 			try
 			{
-				var team = teams.FirstOrDefault(t => t.Name == command[1]);
+				Team team = teams.FirstOrDefault(t => t.Name == command[1]);
 				team.RemovePlayer(command[2]);
 			}
 			catch (InvalidOperationException ex)
@@ -79,7 +79,7 @@ namespace _6.FootballTeamGenerator
 
 		private static void AddPlayerInTeam(HashSet<Team> teams, string[] command)
 		{
-			var team = teams.FirstOrDefault(t => t.Name == command[1]);
+			Team team = teams.FirstOrDefault(t => t.Name == command[1]);
 
 			if (team == null)
 			{
@@ -87,7 +87,7 @@ namespace _6.FootballTeamGenerator
 				return;
 			}
 
-			var player = new Player(command[2], double.Parse(command[3]), double.Parse(command[4]), double.Parse(command[5]), double.Parse(command[6]), double.Parse(command[7]));
+			Player player = new Player(command[2], double.Parse(command[3]), double.Parse(command[4]), double.Parse(command[5]), double.Parse(command[6]), double.Parse(command[7]));
 			team.AddPlayer(player);
 		}
 	}

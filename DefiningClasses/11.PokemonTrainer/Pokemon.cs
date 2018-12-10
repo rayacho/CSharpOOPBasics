@@ -17,9 +17,21 @@ namespace _11.PokemonTrainer
 			_health = health;
 		}
 
-		public int Health { get { return _health; } }
+		public int Health
+		{
+			get
+			{
+				return _health;
+			}
+		}
 
-		public string Element { get { return _element; } }
+		public string Element
+		{
+			get
+			{
+				return _element;
+			}
+		}
 
 		public void ReduceHealth()
 		{

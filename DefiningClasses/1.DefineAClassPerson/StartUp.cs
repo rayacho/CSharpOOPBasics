@@ -6,7 +6,7 @@ namespace DefiningClasses
 	{
 		static void Main(string[] args)
 		{
-			var first = new Person
+			Person first = new Person
 			{
 				Name = "Gosho",
 				Age = 13

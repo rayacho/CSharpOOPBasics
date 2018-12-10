@@ -20,7 +20,10 @@ namespace _3.AnimalFarm
 
 		public string Name
 		{
-			get {	return _name; }
+			get
+			{
+				return _name;
+			}
 
 			private set
 			{
@@ -34,7 +37,10 @@ namespace _3.AnimalFarm
 
 		public int Age
 		{
-			get	{	return _age;	}
+			get
+			{
+				return _age;
+			}
 
 			private set
 			{
@@ -48,11 +54,11 @@ namespace _3.AnimalFarm
 
 		public double ProductPerDay()
 		{
-			return this.CalculateProductPerDay();
+			return CalculateProductPerDay();
 		}
 		private double CalculateProductPerDay()
 		{
-			switch (this.Age)
+			switch (Age)
 			{
 				case 0:
 				case 1:

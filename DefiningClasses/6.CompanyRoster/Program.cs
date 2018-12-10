@@ -50,6 +50,7 @@ namespace _6.CompanyRoster
 			{
 				throw new ArgumentNullException();
 			}
+
 			string name = emptyInput[0];
 			decimal salary = decimal.Parse(emptyInput[1]);
 			string position = emptyInput[2];

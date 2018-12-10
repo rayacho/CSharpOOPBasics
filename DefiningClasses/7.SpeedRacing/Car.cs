@@ -21,24 +21,42 @@ namespace _7.SpeedRacing
 
 		public string Model
 		{
-			get { return _model; }
+			get
+			{
+				return _model;
+			}
 		}
 
 		public double FuelAmount
 		{
-			get { return _fuelAmount; }
-			set { _fuelAmount = value; }
+			get
+			{
+				return _fuelAmount;
+			}
+			set
+			{
+				_fuelAmount = value;
+			}
 		}
 
 		public double FuelConsumptionPerKm
 		{
-			get { return _fuelConsumptionPerKm; }
+			get
+			{
+				return _fuelConsumptionPerKm;
+			}
 		}
 
 		public double DistanceTravelled
 		{
-			get { return _distanceTravelled; }
-			set { _distanceTravelled = value; }
+			get
+			{
+				return _distanceTravelled;
+			}
+			set
+			{
+				_distanceTravelled = value;
+			}
 		}
 
 		public void Drive(double kilometers)

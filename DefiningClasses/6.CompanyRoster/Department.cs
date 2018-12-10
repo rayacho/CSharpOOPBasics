@@ -7,6 +7,7 @@ namespace _6.CompanyRoster
 {
 	class Department
 	{
+		//TODO: VARIABLES WITH _, CHECK EVERY CONSTRUCTOR WITH NULLREFERENCE
 		private List<Employee> _employees;
 		string _name;
 
@@ -30,8 +31,14 @@ namespace _6.CompanyRoster
 
 		public List<Employee> Employees
 		{
-			get { return _employees; }
-			private set { _employees = value; }
+			get
+			{
+				return _employees;
+			}
+			private set
+			{
+				_employees = value;
+			}
 		}
 
 		public decimal AverageSalary => Employees.Select(e => e.Salary).Average();

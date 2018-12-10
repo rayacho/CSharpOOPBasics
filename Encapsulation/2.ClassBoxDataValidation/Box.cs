@@ -20,7 +20,10 @@ namespace _2.ClassBoxDataValidation
 
 		public double Length
 		{
-			get { return _length; }
+			get
+			{
+				return _length;
+			}
 			private set
 			{
 				if (value <= 0)
@@ -33,7 +36,10 @@ namespace _2.ClassBoxDataValidation
 
 		public double Width
 		{
-			get { return _width; }
+			get
+			{
+				return _width;
+			}
 			private set
 			{
 				if (value <= 0)
@@ -46,7 +52,10 @@ namespace _2.ClassBoxDataValidation
 
 		public double Height
 		{
-			get { return _height; }
+			get
+			{
+				return _height;
+			}
 			private set
 			{
 				if (value <= 0)

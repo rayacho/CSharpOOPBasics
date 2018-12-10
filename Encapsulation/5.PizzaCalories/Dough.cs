@@ -11,6 +11,10 @@ namespace _5.PizzaCalories
 		private const int maxWeight = 200;
 		private const int defaultMultiplier = 2;
 
+		private double weight;
+		private string flourType;
+		private string bakingTechnique;
+
 		private Dictionary<string, double> validFlourTypes = new Dictionary<string, double>
 		{
 			["white"] = 1.5,
@@ -24,25 +28,23 @@ namespace _5.PizzaCalories
 			["homemade"] = 1.0,
 		};
 
-		private double weight;
-		private string flourType;
-		private string bakingTechnique;
-
 		public Dough(string flourType, string bakingTechnique, double weight)
 		{
-			this.FlourType = flourType;
-			this.BakingTechnique = bakingTechnique;
-			this.Weight = weight;
+			FlourType = flourType;
+			BakingTechnique = bakingTechnique;
+			Weight = weight;
 		}
 
 		private double FlourMultiplier => validFlourTypes[this.FlourType];
 		private double BakingTechniqueMultiplier => validBakingTechnique[this.BakingTechnique];
-
 		public double Calories => defaultMultiplier * this.Weight * FlourMultiplier * BakingTechniqueMultiplier;
 
 		public double Weight
 		{
-			get { return weight; }
+			get
+			{
+				return weight;
+			}
 			set
 			{
 				if (value < minWeight || value > maxWeight)
@@ -56,7 +58,10 @@ namespace _5.PizzaCalories
 
 		public string FlourType
 		{
-			get { return flourType; }
+			get
+			{
+				return flourType;
+			}
 			set
 			{
 				ValidateTypes(value, validFlourTypes);
@@ -66,7 +71,10 @@ namespace _5.PizzaCalories
 
 		public string BakingTechnique
 		{
-			get { return bakingTechnique; }
+			get
+			{
+				return bakingTechnique;
+			}
 			set
 			{
 				ValidateTypes(value, validBakingTechnique);

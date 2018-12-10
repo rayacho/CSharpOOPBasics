@@ -8,7 +8,7 @@ namespace _13.FamilyTree
 	{
 		static void Main(string[] args)
 		{
-			var familyTree = new List<Person>();
+			List<Person> familyTree = new List<Person>();
 			string mainpersonInput = Console.ReadLine();
 			Person mainPerson = Person.CreatePerson(mainpersonInput);
 			familyTree.Add(mainPerson);
@@ -115,7 +115,7 @@ namespace _13.FamilyTree
 
 		private static void SetChild(List<Person> familyTree, Person parent, string childInput)
 		{ 
-			var child = familyTree.FirstOrDefault(c => c.FullName == childInput || c.Birthday == childInput);
+			Person child = familyTree.FirstOrDefault(c => c.FullName == childInput || c.Birthday == childInput);
 
 			if (child == null)
 			{

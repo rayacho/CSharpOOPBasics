@@ -17,7 +17,13 @@ namespace _11.PokemonTrainer
 			_pokemons = new Stack<Pokemon>();
 		}
 
-		public Stack<Pokemon> Pokemons { get { return _pokemons; } }
+		public Stack<Pokemon> Pokemons
+		{
+			get
+			{
+				return _pokemons;
+			}
+		}
 
 		public string Name
 		{
@@ -37,7 +43,13 @@ namespace _11.PokemonTrainer
 			}
 		}
 
-		public int Badges { get { return _badges; } }
+		public int Badges
+		{
+			get
+			{
+				return _badges;
+			}
+		}
 
 		public void AddABadge()
 		{

@@ -17,14 +17,26 @@ namespace _8.RawData
 
 		public int Age
 		{
-			get { return _age; }
-			set { _age = value; }
+			get
+			{
+				return _age;
+			}
+			set
+			{
+				_age = value;
+			}
 		}
 
 		public double Pressure
 		{
-			get { return _pressure; }
-			set { _pressure = value; }
+			get
+			{
+				return _pressure;
+			}
+			set
+			{
+				_pressure = value;
+			}
 		}
 
 	}

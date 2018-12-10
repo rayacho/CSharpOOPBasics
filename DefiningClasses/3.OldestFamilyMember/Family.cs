@@ -16,8 +16,14 @@ namespace _3.OldestFamilyMember
 
 		public List<Person> People
 		{
-			get { return _people; }
-			set { _people = value; }
+			get
+			{
+				return _people;
+			}
+			set
+			{
+				_people = value;
+			}
 		}
 
 		public void AddMember(Person member)

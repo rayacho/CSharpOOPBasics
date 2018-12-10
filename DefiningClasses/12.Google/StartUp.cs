@@ -8,15 +8,15 @@ namespace _12.Google
 	{
 		static void Main(string[] args)
 		{
-			var collectedData = CollectData();
+			Queue<Person> collectedData = CollectData();
 
 			PrintPerson(collectedData);
 		}
 
 		private static void PrintPerson(Queue<Person> collectedData)
 		{
-			var personToPrint = Console.ReadLine();
-			var person = collectedData.FirstOrDefault(p => p.Name == personToPrint);
+			string personToPrint = Console.ReadLine();
+			Person person = collectedData.FirstOrDefault(p => p.Name == personToPrint);
 
 			if (person != null)
 			{
@@ -26,13 +26,13 @@ namespace _12.Google
 
 		private static Queue<Person> CollectData()
 		{
-			var collectedData = new Queue<Person>();
-			var data = Console.ReadLine().Split();
+			Queue<Person> collectedData = new Queue<Person>();
+			string[] data = Console.ReadLine().Split();
 
 			while (data[0] != "End")
 			{
-				var personName = data[0];
-				var currentPerson = collectedData.FirstOrDefault(p => p.Name == personName);
+				string personName = data[0];
+				Person currentPerson = collectedData.FirstOrDefault(p => p.Name == personName);
 
 				if (currentPerson == null)
 				{
@@ -53,33 +53,33 @@ namespace _12.Google
 			switch (data[1])
 			{
 				case "company":
-					var companyName = data[2];
-					var salary = decimal.Parse(data[4]);
-					var department = data[3];
+					string companyName = data[2];
+					decimal salary = decimal.Parse(data[4]);
+					string department = data[3];
 					currentPerson.AssignACompany(new Company(companyName, salary, department));
 					break;
 
 				case "pokemon":
-					var pokemonName = data[2];
-					var type = data[3];
+					string pokemonName = data[2];
+					string type = data[3];
 					currentPerson.AddInCollection(new Pokemon(pokemonName, type));
 					break;
 
 				case "parents":
-					var parentName = data[2];
-					var parentBirthDay = data[3];
+					string parentName = data[2];
+					string parentBirthDay = data[3];
 					currentPerson.AddInCollection(new Parent(parentName, parentBirthDay));
 					break;
 
 				case "children":
-					var childName = data[2];
-					var childBirthDay = data[3];
+					string childName = data[2];
+					string childBirthDay = data[3];
 					currentPerson.AddInCollection(new Child(childName, childBirthDay));
 					break;
 
 				case "car":
-					var model = data[2];
-					var speed = int.Parse(data[3]);
+					string model = data[2];
+					int speed = int.Parse(data[3]);
 					currentPerson.AssignACar(new Car(model, speed));
 					break;
 				default:

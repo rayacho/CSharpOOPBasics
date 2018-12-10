@@ -12,7 +12,7 @@ namespace _6.Sneaking
 
 			for (int row = 0; row < n; row++)
 			{
-				var input = Console.ReadLine().ToCharArray();
+				char[] input = Console.ReadLine().ToCharArray();
 				room[row] = new char[input.Length];
 				for (int col = 0; col < input.Length; col++)
 				{
@@ -20,7 +20,7 @@ namespace _6.Sneaking
 				}
 			}
 
-			var moves = Console.ReadLine().ToCharArray();
+			char[] moves = Console.ReadLine().ToCharArray();
 			int[] samPosition = new int[2];
 			for (int row = 0; row < room.Length; row++)
 			{

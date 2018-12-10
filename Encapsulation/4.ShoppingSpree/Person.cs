@@ -8,22 +8,25 @@ namespace _4.ShoppingSpree
 	{
 		private string _name;
 		private decimal _money;
-		private List<Product> _Products { get; set; }
+		private List<Product> _products { get; set; }
 
 		public Person()
 		{
-			_Products = new List<Product>();
+			_products = new List<Product>();
 		}
 
 		public Person(string name, decimal money):this()
 		{
-			this.Name = name;
-			this.Money = money;
+			Name = name;
+			Money = money;
 		}
 
 		public string Name
 		{
-			get { return _name; }
+			get
+			{
+				return _name;
+			}
 			set
 			{
 				if(string.IsNullOrWhiteSpace(value))
@@ -37,7 +40,10 @@ namespace _4.ShoppingSpree
 
 		private decimal Money
 		{
-			get { return _money; }
+			get
+			{
+				return _money;
+			}
 			set
 			{
 				if(value < 0)
@@ -52,21 +58,21 @@ namespace _4.ShoppingSpree
 
 		public string TryBuyProduct(Product product)
 		{
-			if (this.Money < product.Price)
+			if (Money < product.Price)
 			{
 				return $"{_name} can't afford {product.Name}";
 			}
 
-			this.Money = Money - product.Price;
-			_Products.Add(product);
+			Money = Money - product.Price;
+			_products.Add(product);
 
 			return $"{_name} bought {product.Name}";
 		}
 
 		public override string ToString()
 		{
-			string productsOutput = _Products.Count > 0 ?
-				string.Join(", ", _Products) : "Nothing bought";
+			string productsOutput = _products.Count > 0 ?
+				string.Join(", ", _products) : "Nothing bought";
 			string result = $"{this.Name} - {productsOutput}";
 			return result;
 		}

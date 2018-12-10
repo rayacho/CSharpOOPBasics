@@ -27,12 +27,18 @@ namespace DefiningClasses
 
 		public string Name
 		{
-			get { return _name; }
+			get
+			{
+				return _name;
+			}
 		}
 
 		public int Age
 		{
-			get { return _age; }
+			get
+			{
+				return _age;
+			}
 		}
 	}
 }

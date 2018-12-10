@@ -46,13 +46,13 @@ namespace _10.CarSalesman
 
 		public override string ToString()
 		{
-			StringBuilder sb = new StringBuilder();
-			sb.AppendFormat("{0}:\n", _model);
-			sb.Append(_engine.ToString());
-			sb.AppendFormat("{0}Weight: {1}\n", OFFSET, _weight == -1 ? "n/a" : _weight.ToString());
-			sb.AppendFormat("{0}Color: {1}", OFFSET, _color);
+			StringBuilder builder = new StringBuilder();
+			builder.AppendFormat("{0}:\n", _model);
+			builder.Append(_engine.ToString());
+			builder.AppendFormat("{0}Weight: {1}\n", OFFSET, _weight == -1 ? "n/a" : _weight.ToString());
+			builder.AppendFormat("{0}Color: {1}", OFFSET, _color);
 
-			return sb.ToString();
+			return builder.ToString();
 		}
 	}
 }

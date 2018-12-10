@@ -17,14 +17,26 @@ namespace _8.RawData
 
 		public int Speed
 		{
-			get { return _speed; }
-			set { _speed = value; }
+			get
+			{
+				return _speed;
+			}
+			set
+			{
+				_speed = value;
+			}
 		}
 
 		public int Power
 		{
-			get { return _power; }
-			set { _power = value; }
+			get
+			{
+				return _power;
+			}
+			set
+			{
+				_power = value;
+			}
 		}
 	}
 }
