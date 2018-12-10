@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.DefineAnInterfaceIPerson", "01.DefineAnInterfaceIPerson\01.DefineAnInterfaceIPerson.csproj", "{1F4AAD12-6E06-42FE-BF89-00144C89AE8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.DefineAnInterfaceIPerson", "01.DefineAnInterfaceIPerson\01.DefineAnInterfaceIPerson.csproj", "{1F4AAD12-6E06-42FE-BF89-00144C89AE8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.MultipleImplementation", "02.MultipleImplementation\02.MultipleImplementation.csproj", "{55EE0FEC-D5D9-4C6B-87E3-D1391D862572}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.MultipleImplementation", "02.MultipleImplementation\02.MultipleImplementation.csproj", "{55EE0FEC-D5D9-4C6B-87E3-D1391D862572}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Ferrari", "03.Ferrari\03.Ferrari.csproj", "{340F044D-07D6-4F7E-8631-282DF9205E91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.Telephony", "04.Telephony\04.Telephony.csproj", "{A7F53800-6BDF-470E-B1CB-96903C58DE60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{55EE0FEC-D5D9-4C6B-87E3-D1391D862572}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55EE0FEC-D5D9-4C6B-87E3-D1391D862572}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55EE0FEC-D5D9-4C6B-87E3-D1391D862572}.Release|Any CPU.Build.0 = Release|Any CPU
+		{340F044D-07D6-4F7E-8631-282DF9205E91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{340F044D-07D6-4F7E-8631-282DF9205E91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{340F044D-07D6-4F7E-8631-282DF9205E91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{340F044D-07D6-4F7E-8631-282DF9205E91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7F53800-6BDF-470E-B1CB-96903C58DE60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7F53800-6BDF-470E-B1CB-96903C58DE60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7F53800-6BDF-470E-B1CB-96903C58DE60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7F53800-6BDF-470E-B1CB-96903C58DE60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
