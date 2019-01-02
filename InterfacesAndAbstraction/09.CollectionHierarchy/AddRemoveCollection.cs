@@ -6,38 +6,38 @@ namespace _09.CollectionHierarchy
 {
 	public class AddRemoveCollection : IAddRemoveCollection
 	{
-		private List<string> data;
-		private List<int> indexes;
-		private List<string> removedElements;
+		private List<string> _data;
+		private List<int> _indexes;
+		private List<string> _removedElements;
 
 		public AddRemoveCollection()
 		{
-			data = new List<string>();
-			indexes = new List<int>();
-			removedElements = new List<string>();
+			_data = new List<string>();
+			_indexes = new List<int>();
+			_removedElements = new List<string>();
 		}
 
 		public void Add(string element)
 		{
-			indexes.Add(0);
-			data.Insert(0, element);
+			_indexes.Add(0);
+			_data.Insert(0, element);
 		}
 
 		public void Remove()
 		{
-			string lastElement = data[data.Count - 1];
-			removedElements.Add(lastElement);
-			data.RemoveAt(data.Count - 1);
+			string lastElement = _data[_data.Count - 1];
+			_removedElements.Add(lastElement);
+			_data.RemoveAt(_data.Count - 1);
 		}
 
 		public void GetRemovedElements()
 		{
-			Console.WriteLine($"{string.Join(" ", removedElements)}");
+			Console.WriteLine($"{string.Join(" ", _removedElements)}");
 		}
 
 		public override string ToString()
 		{
-			return $"{string.Join(" ", indexes)}";
+			return $"{string.Join(" ", _indexes)}";
 		}
 	}
 }

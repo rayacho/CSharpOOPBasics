@@ -6,25 +6,25 @@ namespace _09.CollectionHierarchy
 {
 	class AddCollection : IAddCollection
 	{
-		private List<string> data;
-		private readonly List<int> indexes;
+		private List<string> _data;
+		private readonly List<int> _indexes;
 
 		public AddCollection()
 		{
-			data = new List<string>();
-			indexes = new List<int>();
+			_data = new List<string>();
+			_indexes = new List<int>();
 		}
 
 		public void Add(string element)
 		{
-			int index = data.Count;
-			indexes.Add(index);
-			data.Add(element);
+			int index = _data.Count;
+			_indexes.Add(index);
+			_data.Add(element);
 		}
 
 		public override string ToString()
 		{
-			return $"{string.Join(" ", indexes)}";
+			return $"{string.Join(" ", _indexes)}";
 		}
 	}
 }
