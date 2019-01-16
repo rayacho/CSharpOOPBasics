@@ -11,7 +11,7 @@
 
 	internal class MenuController
 	{
-		private const int DEFAULT_INDEX = 0;
+		private const int DefaultIndex = 0;
 
 		private IController[] _controllers;
 		private Stack<int> _controllerHistory;
@@ -25,7 +25,7 @@
 
 			InitializeControllerHistory();
 
-			_currentOptionIndex = DEFAULT_INDEX;
+			_currentOptionIndex = DefaultIndex;
 		}
 
 		private string Username { get; set; }
@@ -93,7 +93,7 @@
 			if (_controllerHistory.Count > 1)
 			{
 				_controllerHistory.Pop();
-				_currentOptionIndex = DEFAULT_INDEX;
+				_currentOptionIndex = DefaultIndex;
 			}
 
 			RenderCurrentView();
@@ -175,7 +175,7 @@
 
 			var posts = PostService.GetPostsByCategory(categoryId).ToArray();
 
-			int postIndex = categoryController.CurrentPage * CategoryController.PAGE_OFFSET + _currentOptionIndex;
+			int postIndex = categoryController.CurrentPage * CategoryController.PageOffset + _currentOptionIndex;
 			int postId = posts[postIndex - 1].Id;
 
 			PostDetailsController postController = (PostDetailsController)_controllers[(int)MenuState.ViewPost];
@@ -187,7 +187,7 @@
 		private void OpenCategory()
 		{
 			CategoriesController categoriesController = (CategoriesController)CurrentController;
-			int categoryIndex = categoriesController.CurrentPage * CategoriesController.PAGE_OFFSET +
+			int categoryIndex = categoriesController.CurrentPage * CategoriesController.PageOffset +
 				_currentOptionIndex;
 
 			CategoryController categoryController = (CategoryController)_controllers[(int)MenuState.OpenCategory];
@@ -212,7 +212,7 @@
 		private void RenderCurrentView()
 		{
 			CurrentView = CurrentController.GetView(Username);
-			_currentOptionIndex = DEFAULT_INDEX;
+			_currentOptionIndex = DefaultIndex;
 			_forumViewer.RenderView(CurrentView);
 		}
 

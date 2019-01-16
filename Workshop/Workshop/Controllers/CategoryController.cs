@@ -10,8 +10,8 @@
 
 	public class CategoryController : IController, IPaginationController
 	{
-		public const int PAGE_OFFSET = 10;
-		private const int COMMAND_COUNT = PAGE_OFFSET + 3;
+		public const int PageOffset = 10;
+		private const int CommandCount = PageOffset + 3;
 
 		private enum Command
 		{
@@ -25,7 +25,7 @@
 
 		public string[] PostTitles { get; set; }
 
-		private int LastPage => PostTitles.Length / (PAGE_OFFSET + 1);
+		private int LastPage => PostTitles.Length / (PageOffset + 1);
 
 		public int CategoryId { get; private set; }
 
@@ -84,8 +84,8 @@
 		{
 			IEnumerable<Models.Post> allCategoryPosts = PostService.GetPostsByCategory(CategoryId);
 			PostTitles = allCategoryPosts
-				.Skip(CurrentPage * PAGE_OFFSET)
-				.Take(PAGE_OFFSET)
+				.Skip(CurrentPage * PageOffset)
+				.Take(PageOffset)
 				.Select(p => p.Title)
 				.ToArray();
 		}

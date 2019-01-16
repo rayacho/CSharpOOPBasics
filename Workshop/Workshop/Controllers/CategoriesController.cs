@@ -9,8 +9,8 @@
 
 	public class CategoriesController : IController, IPaginationController
 	{
-		public const int PAGE_OFFSET = 10;
-		private const int COMMAND_COUNT = PAGE_OFFSET + 3;
+		public const int PageOffset = 10;
+		private const int CommandCount = PageOffset + 3;
 
 		private enum Command
 		{
@@ -24,7 +24,7 @@
 		private string[] AllCategoryNames { get; set; }
 		private string[] CurrentCategoryNames { get; set; }
 
-		private int LastPage => AllCategoryNames.Length / (PAGE_OFFSET + 1);
+		private int LastPage => AllCategoryNames.Length / (PageOffset + 1);
 
 		private bool IsFirstPage => CurrentPage == 0;
 
@@ -75,8 +75,8 @@
 		{
 			AllCategoryNames = PostService.GetAllCategoryNames();
 			CurrentCategoryNames = AllCategoryNames
-				.Skip(CurrentPage * PAGE_OFFSET)
-				.Take(PAGE_OFFSET)
+				.Skip(CurrentPage * PageOffset)
+				.Take(PageOffset)
 				.ToArray();
 		}
 	}

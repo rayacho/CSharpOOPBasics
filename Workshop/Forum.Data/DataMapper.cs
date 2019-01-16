@@ -9,23 +9,23 @@ namespace Forum.Data
 {
 	public class DataMapper
 	{
-		private const string DATA_PATH = @"C:\Users\RAYA CHORBADZHIYSKA\Desktop\CSharpOOPBasics\CSharpOOPBasics\Workshop\data";
-		private const string CONFIG_PATH = "config.ini";
-		private const string DEFAULT_CONFIG = "users=users.csv\r\ncategories=categories.csv\r\nposts=posts.csv\r\nreplies=replies.csv";
+		private const string DataPath = @"C:\Users\RAYA CHORBADZHIYSKA\Desktop\CSharpOOPBasics\CSharpOOPBasics\Workshop\data";
+		private const string ConfigPath = "config.ini";
+		private const string DefaultConfig = "users=users.csv\r\ncategories=categories.csv\r\nposts=posts.csv\r\nreplies=replies.csv";
 
 		private static readonly Dictionary<string, string> config;
 
 		static DataMapper()
 		{
-			Directory.CreateDirectory(DATA_PATH);
-			config = LoadConfig(DATA_PATH + CONFIG_PATH);
+			Directory.CreateDirectory(DataPath);
+			config = LoadConfig(DataPath + ConfigPath);
 		}
 
 		private static void EnsureConfigFile(string configPath)
 		{
 			if (!File.Exists(configPath))
 			{
-				File.WriteAllText(configPath, DEFAULT_CONFIG);
+				File.WriteAllText(configPath, DefaultConfig);
 			}
 		}
 
@@ -55,7 +55,7 @@ namespace Forum.Data
 			string[] lines = ReadLines(configPath);
 
 			Dictionary<string, string> result = lines.Select(l => l.Split('='))
-				.ToDictionary(l => l[0], l => DATA_PATH + l[1]);
+				.ToDictionary(l => l[0], l => DataPath + l[1]);
 			return result;
 		}
 

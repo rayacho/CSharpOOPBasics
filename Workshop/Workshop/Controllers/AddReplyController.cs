@@ -18,11 +18,11 @@
 			Back
 		}
 
-		private const int TEXT_AREA_WIDTH = 37;
+		private const int TextAreaWidth = 37;
 
-		private const int TEXT_AREA_HEIGHT = 6;
+		private const int TextAreaHeight = 6;
 
-		private const int POST_MAX_LENGTH = 220;
+		private const int PostMaxLength = 220;
 
 		private static int centerTop = Position.ConsoleCenter().Top;
 
@@ -76,7 +76,7 @@
 			Error = false;
 			Reply = new ReplyViewModel();
 			int postTitleLines = PostView?.Content.Count + 1 ?? 1;
-			TextArea = new TextArea(centerLeft - 18, centerTop + postTitleLines - 7, TEXT_AREA_WIDTH, TEXT_AREA_HEIGHT, POST_MAX_LENGTH);
+			TextArea = new TextArea(centerLeft - 18, centerTop + postTitleLines - 7, TextAreaWidth, TextAreaHeight, PostMaxLength);
 		}
 
 		public void GetPostViewModel(int postId)

@@ -19,8 +19,8 @@
 			Success, DetailsError, UsernameTakenError
 		}
 
-		private const string DETAILS_ERROR = "Invalid Username or Password!";
-		private const string USERNAME_TAKEN_ERROR = "Username already in use!";
+		private const string DetailsError = "Invalid Username or Password!";
+		private const string UsernameTakenError = "Username already in use!";
 
 		private string ErrorMessage { get; set;	}
 
@@ -46,10 +46,10 @@
 						case SingUpStatus.Success:
 							return MenuState.SuccessfulLogIn;
 						case SingUpStatus.DetailsError:
-							ErrorMessage = DETAILS_ERROR;
+							ErrorMessage = DetailsError;
 							return MenuState.Error;
 						case SingUpStatus.UsernameTakenError:
-							ErrorMessage = USERNAME_TAKEN_ERROR;
+							ErrorMessage = UsernameTakenError;
 							return MenuState.Error;
 					}
 

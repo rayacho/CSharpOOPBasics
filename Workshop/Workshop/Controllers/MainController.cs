@@ -6,7 +6,7 @@
 
 	public class MainController : IController, IUserRestrictedController
 	{
-		private const int COMMAND_COUNT = 3;
+		private const int CommandCount = 3;
 
 		public MainController()
 		{

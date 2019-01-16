@@ -10,10 +10,10 @@
 
 	public class AddPostController : IController
 	{
-		private const int COMMAND_COUNT = 4;
-		private const int TEXT_AREA_WIDTH = 37;
-		private const int TEXT_AREA_HEIGHT = 18;
-		private const int POST_MAX_LENGTH = 660;
+		private const int CommandCount = 4;
+		private const int TextAreaWidth = 37;
+		private const int TextAreaHeight = 18;
+		private const int PostMaxLength = 660;
 
 		private static int centerTop = Position.ConsoleCenter().Top;
 		private static int centerLeft = Position.ConsoleCenter().Left;
@@ -84,7 +84,7 @@
 			Error = false;
 			Post = new PostViewModel();
 			TextArea = new TextArea(centerLeft - 18, centerTop - 7,
-				TEXT_AREA_WIDTH, TEXT_AREA_HEIGHT, POST_MAX_LENGTH);
+				TextAreaWidth, TextAreaHeight, PostMaxLength);
 		}
 	}
 }

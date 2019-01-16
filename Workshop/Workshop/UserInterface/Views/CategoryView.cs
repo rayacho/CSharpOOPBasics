@@ -7,10 +7,10 @@
 
 	public class CategoryView : IView
 	{
-		private const int PREV_BUTTON = 1;
-		private const int NEXT_BUTTON = 2;
-		private const int NAME_MAX_LENGTH = 14;
-		private const int WHITESPACE_COUNT = 27;
+		private const int PrevButton = 1;
+		private const int NextButton = 2;
+		private const int NameMaxLength = 14;
+		private const int WhitespaceCount = 27;
 		private static int centerTop = Console.WindowHeight / 2;
 		private static int centerLeft = Console.WindowWidth / 2;
 		private string _categoryName;
@@ -92,7 +92,7 @@
 
 		private void InitializeStaticLabels(Position consoleCenter)
 		{
-			string[] labelContent = new string[] { string.Format("CATEGORY: {0}", this._categoryName), "Title", /*"Replies"*/ };
+			string[] labelContent = new string[] { string.Format("CATEGORY: {0}", _categoryName), "Title", /*"Replies"*/ };
 			Position[] labelPositions = new Position[]
 			{
 				new Position(consoleCenter.Left - 18, consoleCenter.Top - 12), // CATEGORY: {0}
