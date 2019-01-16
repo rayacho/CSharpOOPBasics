@@ -2,30 +2,56 @@
 {
 	using Forum.App.Controllers.Contracts;
 	using Forum.App.UserInterface.Contracts;
-
+	using Forum.App.UserInterface.ViewModels;
+	using Forum.App.Views;
+	using Workshop.Controllers.Services;
 
 	public class PostDetailsController : IController, IUserRestrictedController
 	{
-		public bool LoggedInUser => throw new System.NotImplementedException();
+		private enum Command
+		{
+			Back,
+			AddReply
+		}
+
+		public bool LoggedInUser { get; set; }
+
+		public int PostId { get; private set; }
 
 		public MenuState ExecuteCommand(int index)
 		{
-			throw new System.NotImplementedException();
+			switch ((Command)index)
+			{
+				case Command.Back:
+					break;
+				case Command.AddReply:
+					break;
+				default:
+					break;
+			}
+
+			throw new InvalidCommandException();
 		}
 
 		public IView GetView(string userName)
 		{
-			throw new System.NotImplementedException();
+			PostViewModel postViewModel = PostService.GetPostViewModel(PostId);
+			return new PostDetailsView(postViewModel, LoggedInUser);
 		}
 
 		public void UserLogIn()
 		{
-			throw new System.NotImplementedException();
+			LoggedInUser = true;
 		}
 
 		public void UserLogOut()
 		{
-			throw new System.NotImplementedException();
+			LoggedInUser = false;
+		}
+
+		public void SetPostId(int postId)
+		{
+			PostId = postId;
 		}
 	}
 }

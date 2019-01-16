@@ -44,7 +44,7 @@
 			Position authorPosition =
 				new Position(consoleCenter.Left - Post.Author.Length, consoleCenter.Top - 9);
 
-			var labels = new List<ILabel>()
+			List<ILabel> labels = new List<ILabel>()
 			{
 				new Label(Post.Title, titlePosition),
 				new Label($"Author: {Post.Author}", authorPosition),

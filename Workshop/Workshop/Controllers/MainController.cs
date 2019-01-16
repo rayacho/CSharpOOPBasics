@@ -13,11 +13,7 @@
 			LoggedInUser = false;
 		}
 
-		public bool LoggedInUser
-		{
-			get;
-			private set;
-		}
+		public bool LoggedInUser { get; private set; }
 
 		public IView GetView(string userName)
 		{

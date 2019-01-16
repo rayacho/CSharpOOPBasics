@@ -115,6 +115,5 @@
 			}
 			_lines = StringProcessor.Split(Text);
 		}
-
 	}
 }

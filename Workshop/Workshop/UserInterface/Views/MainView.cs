@@ -10,22 +10,11 @@
 			InitializeLabels();
 		}
 
-		public ILabel[] Labels
-		{
-			get;
-			private set;
-		}
+		public ILabel[] Labels { get; private set; }
 
-		public ILabel[] Buttons
-		{
-			get;
-			private set;
-		}
+		public ILabel[] Buttons { get; private set; }
 
-		public string Username
-		{
-			get;
-		}
+		public string Username {get; }
 
 		protected void InitializeLabels()
 		{

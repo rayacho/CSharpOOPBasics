@@ -24,33 +24,15 @@
 			InitializeLabels();
 		}
 
-		public ILabel[] Labels
-		{
-			get;
-			private set;
-		}
+		public ILabel[] Labels { get; private set; }
 
-		public ILabel[] Buttons
-		{
-			get;
-			private set;
-		}
+		public ILabel[] Buttons { get; private set; }
 
-		public string[] PostTitles
-		{
-			get;
-			private set;
-		}
+		public string[] PostTitles {get; private set; }
 
-		public bool IsFirstPage
-		{
-			get; private set;
-		}
+		public bool IsFirstPage { get; private set; }
 
-		public bool IsLastPage
-		{
-			get; private set;
-		}
+		public bool IsLastPage{ get; private set; }
 
 		private void InitializeLabels()
 		{
@@ -102,8 +84,8 @@
 				buttons.Add(label);
 			}
 
-			buttons.Add(new Label(defaultButtonContent[1], defaultButtonPositions[1], this.IsFirstPage));
-			buttons.Add(new Label(defaultButtonContent[2], defaultButtonPositions[2], this.IsLastPage));
+			buttons.Add(new Label(defaultButtonContent[1], defaultButtonPositions[1], IsFirstPage));
+			buttons.Add(new Label(defaultButtonContent[2], defaultButtonPositions[2], IsLastPage));
 
 			Buttons = buttons.ToArray();
 		}

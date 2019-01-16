@@ -28,10 +28,10 @@
 
 		private void InitializeConsole()
 		{
-			this.BackgroundColor = hardCodedBgColor;
-			this.HighlightColor = hardCodedHlColor;
+			BackgroundColor = hardCodedBgColor;
+			HighlightColor = hardCodedHlColor;
 
-			Console.BackgroundColor = this.BackgroundColor;
+			Console.BackgroundColor = BackgroundColor;
 			Console.ForegroundColor = hardCodedFontColor;
 
 			Console.CursorVisible = false;
